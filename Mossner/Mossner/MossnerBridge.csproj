@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6221027-42F9-46C8-9364-8CBCCCDADA39}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alvasoft</RootNamespace>
+    <AssemblyName>Mossner</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Mossner.XML</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.OPCAutomation">
+      <HintPath>.\Interop.OPCAutomation.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>.\log4net.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alvasoft\BridgeConfiguration\ConnectionConfiguration.cs" />
+    <Compile Include="Alvasoft\BridgeConfiguration\MossnerBridgeConfiguration.cs" />
+    <Compile Include="Alvasoft\ConnectionHolder\ConnectionHolderBase.cs" />
+    <Compile Include="Alvasoft\ConnectionHolder\ConnectionHolderCallback.cs" />
+    <Compile Include="Alvasoft\ConnectionHolder\OpcConnectionHolder.cs" />
+    <Compile Include="Alvasoft\ConnectionHolder\OracleConnectionHolder.cs" />
+    <Compile Include="Alvasoft\Mossner\ControllerClientImpl\Area\AbstractAreaData.cs" />
+    <Compile Include="Alvasoft\Mossner\ControllerClientImpl\Area\InputAreaData.cs" />
+    <Compile Include="Alvasoft\Mossner\ControllerClientImpl\Area\OutputAreaData.cs" />
+    <Compile Include="Alvasoft\Mossner\ControllerClientImpl\Area\ScrabAreaData.cs" />
+    <Compile Include="Alvasoft\Mossner\ControllerClientImpl\ControllerClientCallback.cs" />
+    <Compile Include="Alvasoft\Mossner\IdHelper.cs" />
+    <Compile Include="Alvasoft\Mossner\Its.cs" />
+    <Compile Include="Alvasoft\Mossner\LiveBit.cs" />
+    <Compile Include="Alvasoft\Mossner\MossnerBridge.cs" />
+    <Compile Include="Alvasoft\Mossner\ControllerClientImpl\ControllerClient.cs" />
+    <Compile Include="Alvasoft\Mossner\ControllerClientImpl\DataItem.cs" />
+    <Compile Include="Alvasoft\Utils\Activity\Initializable.cs" />
+    <Compile Include="Alvasoft\Utils\Activity\InitializableImpl.cs" />
+    <Compile Include="Alvasoft\Utils\Activity\InitializedException.cs" />
+    <Compile Include="Alvasoft\Utils\Activity\NotInitializedException.cs" />
+    <Compile Include="Alvasoft\Utils\Common\Identifiable.cs" />
+    <Compile Include="Alvasoft\Utils\Common\IdentifiableImpl.cs" />
+    <Compile Include="Alvasoft\Utils\Common\IdentifiableNameable.cs" />
+    <Compile Include="Alvasoft\Utils\Common\IdentifiableNameableImpl.cs" />
+    <Compile Include="Alvasoft\Utils\Common\Nameable.cs" />
+    <Compile Include="Alvasoft\Utils\Common\NameableImpl.cs" />
+    <Compile Include="Alvasoft\Utils\Common\NotFoundException.cs" />
+    <Compile Include="Alvasoft\MossnerBridgeApp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\Logging.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Configuration\Network.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

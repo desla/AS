@@ -1,0 +1,1133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>WagstaffBridge</name>
+  </assembly>
+  <members>
+    <member name="T:Alvasoft.Utils.Activity.Initializable">
+      <summary>
+            Инициализируемое (инициализация/деинициализация).
+            <para>Базовый интерфейс.</para></summary>
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.Initializable.IsInitialized">
+      <summary>
+            Состоянии инициализации.
+            </summary>
+      <returns>
+        <code>true</code>, если инициализован.</returns>
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.Initializable.Initialize">
+      <summary>
+            Инициализация.
+            </summary>
+      <exception cref="T:Alvasoft.Utils.Activity.InitializedException">Если уже инициализован.</exception>
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.Initializable.Uninitialize">
+      <summary>
+            Деинициализация.
+            </summary>
+      <exception cref="T:Alvasoft.Utils.Activity.NotInitializedException">Если не инициализован.</exception>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.RecipeImport">
+      <summary>
+            Импортер рецептов из Wagstaff в ИТЦ
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.#ctor">
+      <summary>
+            Конструктор импортера рецептов. Настраивает дату последнего рецепта.
+            Если не удалось прочитать, устанавливает минимальную.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.SetActive(System.Boolean)">
+      <summary>
+            Установить состояние. 
+            </summary>
+      <param name="aActive">Состояние. True - если запустить, false - остановить.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.GetLastImportedTime">
+      <summary>
+            Вернуть время последнего импортированного рецепта.
+            </summary>
+      <returns>Время.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.SetLastImportedTime(System.DateTime)">
+      <summary>
+            Установить время последнего импортированного рецепта.
+            </summary>
+      <param name="aTime">Время.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.SetCheckingInterval(System.Double)">
+      <summary>
+            Установить интервал сканирования таблицы на появление новых рецептов.
+            </summary>
+      <param name="aInterval">Интервал в миллисекундах.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.SetSqlConnection(Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder для Wagstaff.
+            </summary>
+      <param name="aConnection">ConnectionHolder.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.SetOracleConnection(Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder для ИТЦ.
+            </summary>
+      <param name="aConnection">ConnectionHolder.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.SaveLastImportedTime">
+      <summary>
+            Сохранить на диск время последнего импортированного рецепта.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.CheckNewRecipes(System.Object,System.Timers.ElapsedEventArgs)">
+      <summary>
+            Сканировать таблицу в Wagstaff на наличие новых рецептов. Если появились,
+            то записать в ИТЦ. Метод вызывается таймером.
+            </summary>
+      <param name="sender">Object.</param>
+      <param name="e">ElapsedEventArgs.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.TryMarkRecipsAsArchived(System.Collections.Generic.List{Alvasoft.WagstaffBridge.RecipeInfo})">
+      <summary>
+            Для всех полученных новых рецептов проверить наличие рецептов с такими же именами
+            и проверить состояние их бита архивности. Для синхронизации архивных рецептов.
+            </summary>
+      <param name="importedRecipes">Список полученных рецептов.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.MarkRecipeAsArchived(Alvasoft.WagstaffBridge.RecipeInfo)">
+      <summary>
+            Пометить указанный рецепт как архивный в таблице ИТЦ.
+            </summary>
+      <param name="aRecipeInfo">Рецепт.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.TryImportNewRecipe(Alvasoft.WagstaffBridge.RecipeInfo)">
+      <summary>
+            Записать новый рецепт в ИТЦ.
+            </summary>
+      <param name="aRecipeInfo">Рецепт.</param>
+      <returns>True - если запись прошла успешно, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.RecipeImport.BuildCommands">
+      <summary>
+            Построить sql команды, используемые в текущем классе.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration">
+      <summary>
+            Сетевая конфигурация. Общая.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.LoadFromXmlNode(System.Xml.XmlNode)">
+      <summary>
+            Загрузить из XmlNode'а.
+            </summary>
+      <param name="aNode">XmlNode.</param>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.OpcDataReader.DataReader">
+      <summary>
+            Читает данные из OPC сервера.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.Utils.Activity.InitializableImpl">
+      <summary>
+            Реализация инициализируемого (инициализация/деинициализация).
+            </summary>
+      <remarks>
+            Базовый класс для реализации инициализируемого.
+            </remarks>
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.InitializableImpl.#ctor">
+      <summary>
+            Конструктор по умолчанию.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.InitializableImpl.IsInitialized">
+      <inheritdoc />
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.InitializableImpl.Initialize">
+      <inheritdoc />
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.InitializableImpl.Uninitialize">
+      <inheritdoc />
+    </member>
+    <!-- Некорректный XML-комментарий для члена "M:Alvasoft.Utils.Activity.InitializableImpl.DoInitialize" проигнорирован -->
+    <!-- Некорректный XML-комментарий для члена "M:Alvasoft.Utils.Activity.InitializableImpl.DoUninitialize" проигнорирован -->
+    <member name="M:Alvasoft.Utils.Activity.InitializableImpl.CheckInitialized">
+      <summary>
+            Выполняет проверку инициализации.
+            </summary>
+      <exception cref="T:Alvasoft.Utils.Activity.NotInitializedException">Если не инициализован.</exception>
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.InitializableImpl.CheckNotInitialized">
+      <summary>
+            Выполняет проверку не инициализации.
+            </summary>
+      <exception cref="T:Alvasoft.Utils.Activity.InitializedException">Если инициализован.</exception>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.#ctor">
+      <summary>
+            Конструктор.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetConfiguration(Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration)">
+      <summary>
+            Установить конфигурацию.
+            </summary>
+      <param name="aConfiguration">Конфигурация.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetCallback(Alvasoft.WagstaffBridge.OpcDataReader.DataReaderCallback)">
+      <summary>
+            Установить callback, который будет вызываться при получении данных.
+            </summary>
+      <param name="aCallback">Callback.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetData(Alvasoft.WagstaffBridge.DataReadInfo[])">
+      <summary>
+            Установить DataReadInfo, где хранится информация о читаемых данных - идентификаторы, имена.
+            </summary>
+      <param name="aData">Список данных.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetOpcConnectionHolder(Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder для OPC сервера.
+            </summary>
+      <param name="aConnection">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetActive(System.Boolean)">
+      <summary>
+            Установить состояние работы.
+            </summary>
+      <param name="aActive">True - запустить, false - остановить.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.IsActive">
+      <summary>
+            Получить текущее состояние работы.
+            </summary>
+      <returns>True - если активен, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.GetReadInterval">
+      <summary>
+            Получить интервал чтения данных.
+            </summary>
+      <returns>Интервал в милиесундах.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetReadInterval(System.Double)">
+      <summary>
+            Установить интервал чтения данных.
+            </summary>
+      <param name="aInterval">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.ReadData(System.Object,System.Timers.ElapsedEventArgs)">
+      <summary>
+            Прочитать данные из OPC сервера.
+            </summary>
+      <param name="sender">
+      </param>
+      <param name="e">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.DoInitialize">
+      <summary>
+            Инициализация. Сосздание группы, ее настройка.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.DoUninitialize">
+      <summary>
+            Деинициализация. Удаление группы тегов.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.Utils.Activity.NotInitializedException">
+      <summary>
+            Не инициализован.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.NotInitializedException.#ctor">
+      <summary>
+            Конструктор по умолчанию.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.ConnectionHolder.OPCServerState">
+      <summary>
+            Описывает состояния OpcServer'а.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder">
+      <summary>
+            Реализует механизм поддержания связи с сервером OPC.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase">
+      <summary>
+            Базовый класс, где реализуются алгоритмы поддержания подключения к удаленному серверу.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.#ctor">
+      <summary>
+            В конструкторе создаются и настраиваются таймеры.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.LockConnection">
+      <summary>
+            Заблокировать подключение.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.ReleaseConnection">
+      <summary>
+            Разблокировать подключение.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.UpdateLastOperationTime">
+      <summary>
+            Устанавливает метку времени последней операции на текущее время.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetCallback(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback)">
+      <summary>
+            Установить Callback.
+            </summary>
+      <param name="aCallback">Callback.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetReconnectionInterval(System.Double)">
+      <summary>
+            Установить интервал, через который будет происходить вызов функции подключения.
+            </summary>
+      <param name="aReconnectionInterval">Время в миллисекундах.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetCheckConnectionInterval(System.Double)">
+      <summary>
+            Установить интервал, через который будет происходить вызов функции проверки подключения.
+            </summary>
+      <param name="aCheckConnectionInterval">Время в миллисекундах.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetLastOperationAllowedTime(System.Int32)">
+      <summary>
+            Установить максимально позволенный интервал между операциями на сервере, 
+            по истечению которого будет происходить проверка подключения.
+            </summary>
+      <param name="aSeconds">Время в секундах.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.OpenConnection">
+      <summary>
+            Подключиться.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.GetHolderName">
+      <summary>
+            Вернуть имя теукщей реализации ConnectionHolder.
+            </summary>
+      <returns>Имя.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetHolderName(System.String)">
+      <summary>
+            Установить имя текущей реализации ConnectionHolder.
+            </summary>
+      <param name="aName">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.CloseConnection">
+      <summary>
+            Выполнить отключение от сервера.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.IsConnected">
+      <summary>
+            С высокой долей вероятности возвращает реальное состояние подключения.
+            Используйте функцию TestConnectionIsOpen для подтверждения подключения.
+            </summary>
+      <returns>True - если подключение окрыто, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.ProcessError(System.Exception)">
+      <summary>
+            Обработать ошибку.
+            </summary>
+      <param name="aError">Ошибка.</param>
+      <returns>True - если обработать ошибку удалось, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.TestConnectionIsOpen">
+      <summary>
+            Возвращает реальное состояние подключения.
+            </summary>
+      <returns>True - если подключение открыто, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.DangerousConnect">
+      <summary>
+            Выполнить опасное подключение. В случае неудачи может вызвать исключение.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.TryReconnect(System.Object,System.Timers.ElapsedEventArgs)">
+      <summary>
+            Выполнить безопасное подключение. Вызывается таймером.
+            </summary>
+      <param name="sender">Sender.</param>
+      <param name="e">E.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.CheckLastOperationTimeAndReconnect(System.Object,System.Timers.ElapsedEventArgs)">
+      <summary>
+            Проверка метки времени последней операции на сервере. Вызывается таймером.
+            </summary>
+      <param name="sender">Sender.</param>
+      <param name="e">E.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.#ctor(System.String,System.String)">
+      <summary>
+            Создает OpcConnectionHolder.
+            </summary>
+      <param name="aServerName">Имя OPC-сервера.</param>
+      <param name="aServerHost">Адрес OPC-сервера. Если null - сервер находится на локальной машине.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.#ctor(Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration)">
+      <summary>
+            Конструктор на основе конфигурации.
+            </summary>
+      <param name="aCnfg">Конфигурация.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.GetOpcServer">
+      <summary>
+            Возвращает OpcServer.
+            </summary>
+      <returns>OpcServer.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.CloseConnection">
+      <summary>
+            Закрывает соединение.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.IsConnected">
+      <summary>
+            Подключен ли сервер.
+            </summary>
+      <returns>True - если соединение с сервером открыто, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.ProcessError(System.Exception)">
+      <summary>
+            Обработать ошибку.
+            </summary>
+      <param name="aError">Ошибка.</param>
+      <returns>True - если обработать ошибку удалось, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.TestConnectionIsOpen">
+      <summary>
+            Тестировать соединение с сервером.
+            </summary>
+      <returns>True - если соединение с сервером открыто, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.DangerousConnect">
+      <summary>
+            Выполнить опасное подключение. Может вернуть исключение в случае неудачи.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder">
+      <summary>
+            Реализует механизм поддержания связи с сервером MSSQL.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.#ctor(System.String,System.String,System.String,System.String)">
+      <summary>
+            Создает MsSqlConnectionHolder.
+            </summary>
+      <param name="aServerHost">Имя/Адрес удаленного сервера.</param>
+      <param name="aDatabase">Имя базы данных.</param>
+      <param name="aUserId">Имя пользователя.</param>
+      <param name="aPassword">Пароль пользователя.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.#ctor(Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration)">
+      <summary>
+            Конструктор на основе конфигурации.
+            </summary>
+      <param name="aCnfg">Конфигурация.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.GetSqlConnection">
+      <summary>
+            Возвращает SqlConnection.
+            </summary>
+      <returns>SqlConnection.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.CloseConnection">
+      <summary>
+            Закрывает текущее соединение.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.IsConnected">
+      <summary>
+            Подключено ли текущее соединение.
+            </summary>
+      <returns>True - если подключение открыто, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.ProcessError(System.Exception)">
+      <summary>
+            Обработать ошибку.
+            </summary>
+      <param name="aError">Ошибка.</param>
+      <returns>True - если удалось обработать ошибку, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.TestConnectionIsOpen">
+      <summary>
+            Тестировать текущее соединение.
+            </summary>
+      <returns>True - если подключение открыто, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.DangerousConnect">
+      <summary>
+            Выполнить подключение. Может выдать исключение в случае неудачи.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.CreateConnectionString">
+      <summary>
+            Сформировать строку подключение для SqlConnection.
+            </summary>
+      <returns>Строка подключения.</returns>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.CastScheduleExport">
+      <summary>
+            Экспортер данных из ИТЦ в Wagstaff.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.#ctor">
+      <summary>
+            Конструктор.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.SetActive(System.Boolean)">
+      <summary>
+            Установить состояние работы.
+            </summary>
+      <param name="aActive">True - запустить, false - остановить.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.SetCheckingInterval(System.Double)">
+      <summary>
+            Установить интервал сканирования таблицы на наличие новых записей.
+            </summary>
+      <param name="aCheckingInterval">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.SetOracleConnection(Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder на ИТЦ.
+            </summary>
+      <param name="aConnection">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.SetSqlConnection(Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder на Wagstaff.
+            </summary>
+      <param name="aConnection">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.CheckNewCastSchedule(System.Object,System.Timers.ElapsedEventArgs)">
+      <summary>
+            Проверить новые записи и, если они есть, переслать в Wagstaff.
+            Метод запускается таймером.
+            </summary>
+      <param name="sender">Sender.</param>
+      <param name="e">E.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.MarkCastScheduleAsSended(Alvasoft.WagstaffBridge.CastSchedule,Alvasoft.WagstaffBridge.ScheduleState)">
+      <summary>
+            Пометить запись в ITS как отправленную, либо не отправленную (ошибка).
+            </summary>
+      <param name="aCastSchedule">Запись.</param>
+      <param name="aState">Состояние отправки.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.TrySaveToWagstaff(Alvasoft.WagstaffBridge.CastSchedule)">
+      <summary>
+            Сохраняет запись в Wagstaff.
+            </summary>
+      <param name="aCastSchedule">Запись.</param>
+      <returns>True - если запись успешно сохранена, False - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.CastScheduleExport.BuildCommands">
+      <summary>
+            Построить sql команды, используемые в текущем классе.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.Utils.Activity.InitializedException">
+      <summary>
+            Инициализован.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.Utils.Activity.InitializedException.#ctor">
+      <summary>
+            Конструктор по умолчанию.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.WagstaffBridgeApp">
+      <summary>
+            Класс приложения.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.WagstaffBridgeApp.Main(System.String[])">
+      <summary>
+            Главная функция.
+            </summary>
+      <param name="args">
+      </param>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.WagstaffBridge">
+      <summary>
+            Связывает все элементы системы.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback">
+      <summary>
+            Интерфейс Callback'ов для ConectionHolder.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback.OnConnected(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase)">
+      <summary>
+            Вызывается в случае установления соединения с сервером.
+            </summary>
+      <param name="aConnection">Текущий ConnectionHolder.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback.OnDisconnected(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase)">
+      <summary>
+            Вызывается в случае отключения от сервера.
+            </summary>
+      <param name="aConnection">Текущий ConnectionHolder.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback.OnError(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase,System.Exception)">
+      <summary>
+            Вызывается в случае обработки ошибки.
+            </summary>
+      <param name="aConnection">Текущий ConnectionHolder.</param>
+      <param name="aError">Ошибка.</param>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderCallback">
+      <summary>
+            Обратная связь при получении данных от DataReader.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderCallback.OnReadedData(Alvasoft.WagstaffBridge.DataValue)">
+      <summary>
+            Данные получены.
+            </summary>
+      <param name="aDataValue">Данные.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.WagstaffBridge.DoInitialize">
+      <summary>
+            Инициализация и настройска элементов системы.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.WagstaffBridge.LoadConfiguration">
+      <summary>
+            Загрузка конфигурации из конфигурационных файлов.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.WagstaffBridge.DoUninitialize">
+      <summary>
+            Деинициализация. Закрытие соединений.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.WagstaffBridge.OnConnected(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase)">
+      <summary>
+            Обратная связь. Происходит при подключении какого-либо ConnectionHolder'а, на который подписан WagstaffBridge.
+            </summary>
+      <param name="aConnection">ConnectionHolder, который успешно подключился.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.WagstaffBridge.OnDisconnected(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase)">
+      <summary>
+            Обратная связь. Происходит при отключении ConnectionHolder'а.
+            </summary>
+      <param name="aConnection">ConnectionHolder, который потерял связь.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.WagstaffBridge.OnError(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase,System.Exception)">
+      <summary>
+            Обратная связь. Происходит при ошибке ConnectionHolder'а.
+            </summary>
+      <param name="aConnection">ConnectionHolder, в котором призошла ошибка.</param>
+      <param name="aError">Ошибка.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.WagstaffBridge.OnReadedData(Alvasoft.WagstaffBridge.DataValue)">
+      <summary>
+            Обратная связь. Происходит при получении данных из DataReader'а, на который подписан текущий WagstaffBridge.
+            </summary>
+      <param name="aDataValue">Прочитанные данные.</param>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder">
+      <summary>
+            Реализует механизм поддержания связи с Oracle-сервером.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.#ctor(System.String,System.String,System.String)">
+      <summary>
+            Создает OracleConnectionHolder.
+            </summary>
+      <param name="aServerHost">Имя/Адрес сервера.</param>
+      <param name="aUserName">Имя пользователя.</param>
+      <param name="aPassword">Пароль пользователя.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.#ctor(Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration)">
+      <summary>
+            Конструктор на основе конфигурации.
+            </summary>
+      <param name="aCnfg">Конфигурация.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.GetOracleConnection">
+      <summary>
+            Вернуть OracleConnection.
+            </summary>
+      <returns>OracleConnection.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.CloseConnection">
+      <summary>
+            Закрыть подключение.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.IsConnected">
+      <summary>
+            Подключен ли сервер.
+            </summary>
+      <returns>True - если соединение с сервером открыто, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.ProcessError(System.Exception)">
+      <summary>
+            Обработать ошибку.
+            </summary>
+      <param name="aError">Ошибка.</param>
+      <returns>True - если удалось обработать ошибку, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.TestConnectionIsOpen">
+      <summary>
+            Тестировать соединение.
+            </summary>
+      <returns>True - если соединение открыто, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.DangerousConnect">
+      <summary>
+            Выполнить опасное подключение. Может завершиться с исключением.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.CreateConnectionString">
+      <summary>
+            Сформировать строку подключение для OracleConnection.
+            </summary>
+      <returns>Старока подключения.</returns>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.DataWriter">
+      <summary>
+            Записывает данные в таблицы ИТЦ.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataWriter.#ctor">
+      <summary>
+            Конструктор. 
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataWriter.SetOracleConnectionHolder(Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder для ИТЦ.
+            </summary>
+      <param name="aConnectionHolder">ConnectionHolder.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataWriter.TryWriteData(Alvasoft.WagstaffBridge.DataValue)">
+      <summary>
+            Записать данные в базу.
+            </summary>
+      <param name="aData">Данные.</param>
+      <returns>True - если запись прошла успешно, false - иначе.</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataWriter.BuildCommands">
+      <summary>
+            Постороить sql команды, используемые в DataWriter'е.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.DataBuffer">
+      <summary>
+            Буфер для данных из OPC. В случае отсутствия соединения с ИТЦ сохраняет данные в собственную базу.
+            При восстановлении связи перебрасывает данные в ИТЦ.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.#ctor">
+      <summary>
+            Буфер для накопления данных в случае отсутствия связи с ИТЦ.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.SetConfiguration(Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration)">
+      <summary>
+            Установить конфигурацию. Так как буфера не важно какие теги сохранять, ему нужна вся конфигурация системы.
+            </summary>
+      <param name="aConfiguration">Конфигурация.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.SetActive(System.Boolean)">
+      <summary>
+            Установить состояние.
+            </summary>
+      <param name="isActive">True - если запустить работу, false - остановить.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.SetAttemptsInterval(System.Double)">
+      <summary>
+            Установить интервал для попыток передачи данных в ИТЦ.
+            </summary>
+      <param name="aInterval">Интервал в миллисекундах.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.SetSqlConnection(Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder на буферную таблицу.
+            </summary>
+      <param name="aSqlConnection">ConnectionHolder.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.SetDataWriter(Alvasoft.WagstaffBridge.DataWriter)">
+      <summary>
+            Установить DataWriter, в который производить попытки пересылки данных.
+            </summary>
+      <param name="aWriter">DataWriter.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.TrySendData(System.Object,System.Timers.ElapsedEventArgs)">
+      <summary>
+            Попытаться переслать данные из буфера в указанный DataWriter. Метод вызывается таймером.
+            </summary>
+      <param name="sender">Object.</param>
+      <param name="e">ElapsedEventArgs.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.SetIdsToDataValue(Alvasoft.WagstaffBridge.DataValue)">
+      <summary>
+            Установить данным из буфера все ID по конфигурации
+            </summary>
+      <param name="aData">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.SetNamesToDataValue(Alvasoft.WagstaffBridge.DataValue)">
+      <summary>
+            Установить данным имена по конфигурации.
+            </summary>
+      <param name="aData">
+      </param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.StoreData(Alvasoft.WagstaffBridge.DataValue)">
+      <summary>
+            Сохранить данные в буферную таблицу.
+            </summary>
+      <param name="aData">Данные.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.RemoveData(Alvasoft.WagstaffBridge.DataValue)">
+      <summary>
+            Удалить данные из буфера.
+            </summary>
+      <param name="aData">Данные.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.DataBuffer.BuildCommands">
+      <summary>
+            Постояить все sql команды, используемые в DataBuffer.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator">
+      <summary>
+            Активатор для DataReader. Настраивается на указанный тег в OPC. Для определения начала и конца плавки.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.SetOpcConnection(Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder для OPC сервера.
+            </summary>
+      <param name="aOpcConnection">ConnectionHolder.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.SetDataReader(Alvasoft.WagstaffBridge.OpcDataReader.DataReader)">
+      <summary>
+            Установить DataReader, активируемый в случае начала плавки.
+            </summary>
+      <param name="aDataReader">DataReader.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.SetActivationItemName(System.String)">
+      <summary>
+            Установить имя тега, значение которого мониторится.
+            SYS_PV_StatePos.
+            </summary>
+      <param name="aItemName">Имя тега.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.DoInitialize">
+      <summary>
+            Инициализация. Настройка группы, установка асинхронного метода чтения данных для указанного тега.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.ReadItemFirstTime">
+      <summary>
+            Получить значение тега в первый раз (при запуске).
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.DoUninitialize">
+      <summary>
+            Деинициализация. Закрытие соединения, очистка группы OPC.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.ActivationItemValueChanged(System.Int32,System.Int32,System.Array@,System.Array@,System.Array@,System.Array@)">
+      <summary>
+            Асинхронное событие происходит при изменении значения указанного OPC-тега.
+            </summary>
+      <param name="transactionid">Номер транзакции.</param>
+      <param name="numitems">Количество элементов группы.</param>
+      <param name="clienthandles">Список handle'ов группы.</param>
+      <param name="itemvalues">Значения тегов.</param>
+      <param name="qualities">Качество данных.</param>
+      <param name="timestamps">Время изменения.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.ActivateReader(System.Int32)">
+      <summary>
+            Активировать, либо деактивировать DataReader с учетом значения тега.
+            </summary>
+      <param name="aActivationItemValue">Значение тега.</param>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.DataValue">
+      <summary>
+            Данные из OPC.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.Id">
+      <summary>
+            Для сохранения в БУФЕРНУЮ ТАБЛИЦУ и удаления из нее.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.TypeId">
+      <summary>
+            Идентификатор типа.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.ObjectId">
+      <summary>
+            Идентификатор объекта.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.DataId">
+      <summary>
+            Идентификатор данных.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.ValueTime">
+      <summary>
+            Време чтения данных.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.Value">
+      <summary>
+            Значение.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.TypeName">
+      <summary>
+            Имя типа - для сохранения в БУФЕРНУЮ ТАБЛИЦУ.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.ObjectName">
+      <summary>
+            Имя объекта.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataValue.DataName">
+      <summary>
+            Имя значения.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.DataReadInfo">
+      <summary>
+            Информация для конфигруации.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataReadInfo.TypeId">
+      <summary>
+            Идентификатор типа.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataReadInfo.ObjectId">
+      <summary>
+            Идентификатор объекта.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataReadInfo.DataId">
+      <summary>
+            Идентификатор данных.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataReadInfo.OpcItemName">
+      <summary>
+            Имя OPC тега.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataReadInfo.TypeName">
+      <summary>
+            Имя типа
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataReadInfo.ObjectName">
+      <summary>
+            Имя объекта.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.DataReadInfo.DataName">
+      <summary>
+            Имя значения.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.RecipeInfo">
+      <summary>
+            Рецепт.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.RecipeInfo.Id">
+      <summary>
+            Идентификатор.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.RecipeInfo.Name">
+      <summary>
+            Имя рецепта.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.RecipeInfo.Revision">
+      <summary>
+            Ревизия рецепта.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.RecipeInfo.Technology">
+      <summary>
+            Технология.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.RecipeInfo.Alloy">
+      <summary>
+            Сплав.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.RecipeInfo.CreationTime">
+      <summary>
+            Время создания.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.RecipeInfo.IsArchived">
+      <summary>
+            Метка архивности.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.CastSchedule">
+      <summary>
+            Плавка.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.CastSchedule.Id">
+      <summary>
+            Идентификатор.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.CastSchedule.RecipeName">
+      <summary>
+            Имя рецепта.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.CastSchedule.RecipeRevision">
+      <summary>
+            Ревизия.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.CastSchedule.CastNumber">
+      <summary>
+            Номер плавки.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.CastSchedule.ScheduleState">
+      <summary>
+            Состояние.
+            </summary>
+    </member>
+    <member name="P:Alvasoft.WagstaffBridge.CastSchedule.Priority">
+      <summary>
+            Приоритет.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.ScheduleState">
+      <summary>
+            Состояние плавки в таблице CAST_SCHEDULE
+            </summary>
+    </member>
+    <member name="F:Alvasoft.WagstaffBridge.ScheduleState.NOT_PROCESSED">
+      <summary>
+            Не обработано.
+            </summary>
+    </member>
+    <member name="F:Alvasoft.WagstaffBridge.ScheduleState.WAS_SAVED">
+      <summary>
+            Передано.
+            </summary>
+    </member>
+    <member name="F:Alvasoft.WagstaffBridge.ScheduleState.WAS_ERROR">
+      <summary>
+            Ошибка передачи.
+            </summary>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration">
+      <summary>
+            Конфигурация DataReader.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration.LoadFromXmlNode(System.Xml.XmlNode)">
+      <summary>
+            Загрузить конфигурацию из указанного XmlNode'а.
+            </summary>
+      <param name="aNode">XmlNode.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration.LoadDataReadInfoFromNode(System.Xml.XmlNode)">
+      <summary>
+            Загрузить информацию конкретного DataReadInfo.
+            </summary>
+      <param name="aNode">XmlNode</param>
+      <returns>Загруженный DataReadInfo</returns>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration.SetIdsToOpcItems(System.Collections.Generic.List{Alvasoft.WagstaffBridge.DataReadInfo})">
+      <summary>
+            Установить идентификаторы на основе данных из ИТЦ.
+            </summary>
+      <param name="aReadDataInfoList">
+      </param>
+    </member>
+    <member name="T:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration">
+      <summary>
+            Общая конфигурация приложения. 
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.SetOracleConnection(Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder)">
+      <summary>
+            Установить ConnectionHolder для инициализации конфигурации.
+            </summary>
+      <param name="aConnection">ConnectionHolder.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.LoadConnectionsConfiguration(System.String)">
+      <summary>
+            Загрузить сетевую конфигурацию из файла XML.
+            </summary>
+      <param name="aXmlFile">Путь к файлу конфигурации.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.LoadOpcItemsConfiguration(System.String)">
+      <summary>
+            Загрузить конфигурацию OPC-тегов из XML файла.
+            </summary>
+      <param name="aXmlFile">Имя файла.</param>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.DoInitialize">
+      <summary>
+            Инициализация конфигруации. При появлении подключения к ИТЦ считываем идентификаторы данных и настраиваем их у себя.
+            </summary>
+    </member>
+    <member name="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.SetIdsToDataInfo(System.Collections.Generic.List{Alvasoft.WagstaffBridge.DataReadInfo})">
+      <summary>
+            Установить идентификаторы на основе данных из ИТЦ.
+            </summary>
+      <param name="aReadDataInfoList">
+      </param>
+    </member>
+    <member name="N:Alvasoft.Utils.Activity">
+      <summary />
+    </member>
+    <member name="N:Alvasoft.WagstaffBridge">
+      <summary />
+    </member>
+    <member name="N:Alvasoft.WagstaffBridge.BridgeConfiguration">
+      <summary />
+    </member>
+    <member name="N:Alvasoft.WagstaffBridge.ConnectionHolder">
+      <summary />
+    </member>
+    <member name="N:Alvasoft.WagstaffBridge.OpcDataReader">
+      <summary />
+    </member>
+  </members>
+</doc>

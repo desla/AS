@@ -1,0 +1,1459 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML/EN">
+
+<HTML>
+  <BODY>
+
+  <UL>
+    <LI><OBJECT type="text/sitemap">
+      <param name="Name" value="Alvasoft.Utils.Activity">
+      <param name="Local" value="html\N_Alvasoft_Utils_Activity.htm">
+    </OBJECT></LI>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Initializable - интерфейс">
+        <param name="Local" value="html\T_Alvasoft_Utils_Activity_Initializable.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Initializable - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_Utils_Activity_Initializable.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Initialize - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_Initializable_Initialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsInitialized - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_Initializable_IsInitialized.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Uninitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_Initializable_Uninitialize.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="InitializableImpl - класс">
+        <param name="Local" value="html\T_Alvasoft_Utils_Activity_InitializableImpl.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="InitializableImpl - конструктор">
+          <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializableImpl__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="InitializableImpl - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_Utils_Activity_InitializableImpl.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="CheckInitialized - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializableImpl_CheckInitialized.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="CheckNotInitialized - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializableImpl_CheckNotInitialized.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoInitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializableImpl_DoInitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoUninitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializableImpl_DoUninitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Initialize - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializableImpl_Initialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsInitialized - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializableImpl_IsInitialized.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Uninitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializableImpl_Uninitialize.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="InitializedException - класс">
+        <param name="Local" value="html\T_Alvasoft_Utils_Activity_InitializedException.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="InitializedException - конструктор">
+          <param name="Local" value="html\M_Alvasoft_Utils_Activity_InitializedException__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="InitializedException - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_Utils_Activity_InitializedException.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="InitializedException - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_Utils_Activity_InitializedException.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="InitializedException - события">
+          <param name="Local" value="html\Events_T_Alvasoft_Utils_Activity_InitializedException.htm">
+        </OBJECT></LI>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NotInitializedException - класс">
+        <param name="Local" value="html\T_Alvasoft_Utils_Activity_NotInitializedException.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NotInitializedException - конструктор">
+          <param name="Local" value="html\M_Alvasoft_Utils_Activity_NotInitializedException__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NotInitializedException - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_Utils_Activity_NotInitializedException.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NotInitializedException - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_Utils_Activity_NotInitializedException.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NotInitializedException - события">
+          <param name="Local" value="html\Events_T_Alvasoft_Utils_Activity_NotInitializedException.htm">
+        </OBJECT></LI>
+      </UL>
+    </UL>
+  </UL>
+  <UL>
+    <LI><OBJECT type="text/sitemap">
+      <param name="Name" value="Alvasoft.WagstaffBridge">
+      <param name="Local" value="html\N_Alvasoft_WagstaffBridge.htm">
+    </OBJECT></LI>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="CastSchedule - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_CastSchedule.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="CastSchedule - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_CastSchedule__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="CastSchedule - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_CastSchedule.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="CastSchedule - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_CastSchedule.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="CastNumber - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_CastSchedule_CastNumber.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Id - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_CastSchedule_Id.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Priority - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_CastSchedule_Priority.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="RecipeName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_CastSchedule_RecipeName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="RecipeRevision - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_CastSchedule_RecipeRevision.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ScheduleState - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_CastSchedule_ScheduleState.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="CastScheduleExport - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_CastScheduleExport.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="CastScheduleExport - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_CastScheduleExport__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="CastScheduleExport - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_CastScheduleExport.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetActive - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_CastScheduleExport_SetActive.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetCheckingInterval - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_CastScheduleExport_SetCheckingInterval.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetOracleConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_CastScheduleExport_SetOracleConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetSqlConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_CastScheduleExport_SetSqlConnection.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DataBuffer - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_DataBuffer.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataBuffer - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataBuffer__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataBuffer - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_DataBuffer.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetActive - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataBuffer_SetActive.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetAttemptsInterval - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataBuffer_SetAttemptsInterval.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetConfiguration - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataBuffer_SetConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetDataWriter - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataBuffer_SetDataWriter.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetSqlConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataBuffer_SetSqlConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="StoreData - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataBuffer_StoreData.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DataReadInfo - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_DataReadInfo.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReadInfo - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataReadInfo__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReadInfo - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_DataReadInfo.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReadInfo - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_DataReadInfo.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DataId - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataReadInfo_DataId.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DataName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataReadInfo_DataName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ObjectId - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataReadInfo_ObjectId.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ObjectName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataReadInfo_ObjectName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OpcItemName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataReadInfo_OpcItemName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TypeId - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataReadInfo_TypeId.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TypeName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataReadInfo_TypeName.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DataValue - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_DataValue.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataValue - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataValue__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataValue - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_DataValue.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataValue - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_DataValue.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DataId - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_DataId.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DataName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_DataName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Id - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_Id.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ObjectId - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_ObjectId.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ObjectName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_ObjectName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TypeId - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_TypeId.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TypeName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_TypeName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Value - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_Value.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ValueTime - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_DataValue_ValueTime.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DataWriter - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_DataWriter.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataWriter - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataWriter__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataWriter - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_DataWriter.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetOracleConnectionHolder - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataWriter_SetOracleConnectionHolder.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TryWriteData - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_DataWriter_TryWriteData.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="RecipeImport - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_RecipeImport.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="RecipeImport - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_RecipeImport__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="RecipeImport - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_RecipeImport.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="GetLastImportedTime - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_RecipeImport_GetLastImportedTime.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetActive - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_RecipeImport_SetActive.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetCheckingInterval - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_RecipeImport_SetCheckingInterval.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetLastImportedTime - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_RecipeImport_SetLastImportedTime.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetOracleConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_RecipeImport_SetOracleConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetSqlConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_RecipeImport_SetSqlConnection.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="RecipeInfo - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_RecipeInfo.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="RecipeInfo - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_RecipeInfo__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="RecipeInfo - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_RecipeInfo.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="RecipeInfo - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_RecipeInfo.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Alloy - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_RecipeInfo_Alloy.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="CreationTime - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_RecipeInfo_CreationTime.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Id - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_RecipeInfo_Id.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsArchived - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_RecipeInfo_IsArchived.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Name - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_RecipeInfo_Name.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Revision - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_RecipeInfo_Revision.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Technology - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_RecipeInfo_Technology.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ScheduleState - перечисление">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_ScheduleState.htm">
+      </OBJECT></LI>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="WagstaffBridge - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_WagstaffBridge.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="WagstaffBridge - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_WagstaffBridge__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="WagstaffBridge - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_WagstaffBridge.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoInitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_WagstaffBridge_DoInitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoUninitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_WagstaffBridge_DoUninitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OnConnected - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_WagstaffBridge_OnConnected.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OnDisconnected - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_WagstaffBridge_OnDisconnected.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OnError - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_WagstaffBridge_OnError.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OnReadedData - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_WagstaffBridge_OnReadedData.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+  <UL>
+    <LI><OBJECT type="text/sitemap">
+      <param name="Name" value="Alvasoft.WagstaffBridge.BridgeConfiguration">
+      <param name="Local" value="html\N_Alvasoft_WagstaffBridge_BridgeConfiguration.htm">
+    </OBJECT></LI>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ConnectionConfiguration - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ConnectionConfiguration - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ConnectionConfiguration - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="LoadFromXmlNode - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_LoadFromXmlNode.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ConnectionConfiguration - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Database - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_Database.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Host - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_Host.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Password - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_Password.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ReconnectionInterval - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_ReconnectionInterval.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ServerName - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_ServerName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="User - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_User.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DataReaderConfiguration - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReaderConfiguration - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReaderConfiguration - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="LoadFromXmlNode - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration_LoadFromXmlNode.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetIdsToOpcItems - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration_SetIdsToOpcItems.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReaderConfiguration - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DataInfo - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration_DataInfo.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ReadInterval - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration_ReadInterval.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="WagstaffBridgeConfiguration - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="WagstaffBridgeConfiguration - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="WagstaffBridgeConfiguration - поля">
+          <param name="Local" value="html\Fields_T_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="bufSqlConfiguration - поле">
+            <param name="Local" value="html\F_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_bufSqlConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="opcConfiguration - поле">
+            <param name="Local" value="html\F_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_opcConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="oracleConfiguration - поле">
+            <param name="Local" value="html\F_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_oracleConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="wagsSqlConfiguration - поле">
+            <param name="Local" value="html\F_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_wagsSqlConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="WagstaffBridgeConfiguration - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoInitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_DoInitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="LoadConnectionsConfiguration - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_LoadConnectionsConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="LoadOpcItemsConfiguration - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_LoadOpcItemsConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetOracleConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_SetOracleConnection.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="WagstaffBridgeConfiguration - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DataInfo - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_DataInfo.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="MixerCurrdataConfiguration - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_MixerCurrdataConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="WagstaffCurdataConfiguration - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_WagstaffCurdataConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+  <UL>
+    <LI><OBJECT type="text/sitemap">
+      <param name="Name" value="Alvasoft.WagstaffBridge.ConnectionHolder">
+      <param name="Local" value="html\N_Alvasoft_WagstaffBridge_ConnectionHolder.htm">
+    </OBJECT></LI>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ConnectionHolderBase - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ConnectionHolderBase - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ConnectionHolderBase - поля">
+          <param name="Local" value="html\Fields_T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="callback - поле">
+            <param name="Local" value="html\F_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_callback.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="checkConnectionTimer - поле">
+            <param name="Local" value="html\F_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_checkConnectionTimer.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ConnectionHolderBase - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="CloseConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_CloseConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DangerousConnect - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_DangerousConnect.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="GetHolderName - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_GetHolderName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsConnected - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_IsConnected.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="LockConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_LockConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OpenConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_OpenConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ProcessError - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_ProcessError.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ReleaseConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_ReleaseConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetCallback - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetCallback.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetCheckConnectionInterval - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetCheckConnectionInterval.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetHolderName - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetHolderName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetLastOperationAllowedTime - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetLastOperationAllowedTime.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetReconnectionInterval - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetReconnectionInterval.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TestConnectionIsOpen - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_TestConnectionIsOpen.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TryReconnect - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_TryReconnect.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="UpdateLastOperationTime - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_UpdateLastOperationTime.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ConnectionHolderBase - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsConnectionProcessActive - свойство">
+            <param name="Local" value="html\P_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_IsConnectionProcessActive.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ConnectionHolderCallback - интерфейс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ConnectionHolderCallback - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OnConnected - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback_OnConnected.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OnDisconnected - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback_OnDisconnected.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OnError - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback_OnError.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="MsSqlConnectionHolder - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="MsSqlConnectionHolder - конструктор">
+          <param name="Local" value="html\Overload_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder__ctor.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="MsSqlConnectionHolder(ConnectionConfiguration) - конструктор">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder__ctor.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="MsSqlConnectionHolder(String, String, String, String) - конструктор">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder__ctor_1.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="MsSqlConnectionHolder - поля">
+          <param name="Local" value="html\Fields_T_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="MsSqlConnectionHolder - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="CloseConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_CloseConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DangerousConnect - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_DangerousConnect.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="GetSqlConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_GetSqlConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsConnected - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_IsConnected.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ProcessError - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_ProcessError.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TestConnectionIsOpen - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_TestConnectionIsOpen.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="MsSqlConnectionHolder - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder.htm">
+        </OBJECT></LI>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="OpcConnectionHolder - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="OpcConnectionHolder - конструктор">
+          <param name="Local" value="html\Overload_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder__ctor.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OpcConnectionHolder(ConnectionConfiguration) - конструктор">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder__ctor.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OpcConnectionHolder(String, String) - конструктор">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder__ctor_1.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="OpcConnectionHolder - поля">
+          <param name="Local" value="html\Fields_T_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="OpcConnectionHolder - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="CloseConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_CloseConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DangerousConnect - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_DangerousConnect.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="GetOpcServer - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_GetOpcServer.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsConnected - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_IsConnected.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ProcessError - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_ProcessError.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TestConnectionIsOpen - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_TestConnectionIsOpen.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="OpcConnectionHolder - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder.htm">
+        </OBJECT></LI>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="OracleConnectionHolder - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="OracleConnectionHolder - конструктор">
+          <param name="Local" value="html\Overload_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder__ctor.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OracleConnectionHolder(ConnectionConfiguration) - конструктор">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder__ctor.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OracleConnectionHolder(String, String, String) - конструктор">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder__ctor_1.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="OracleConnectionHolder - поля">
+          <param name="Local" value="html\Fields_T_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="OracleConnectionHolder - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="CloseConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_CloseConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DangerousConnect - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_DangerousConnect.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="GetOracleConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_GetOracleConnection.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsConnected - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_IsConnected.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="ProcessError - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_ProcessError.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="TestConnectionIsOpen - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_TestConnectionIsOpen.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="OracleConnectionHolder - свойства">
+          <param name="Local" value="html\Properties_T_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder.htm">
+        </OBJECT></LI>
+      </UL>
+    </UL>
+  </UL>
+  <UL>
+    <LI><OBJECT type="text/sitemap">
+      <param name="Name" value="Alvasoft.WagstaffBridge.OpcDataReader">
+      <param name="Local" value="html\N_Alvasoft_WagstaffBridge_OpcDataReader.htm">
+    </OBJECT></LI>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DataReader - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_OpcDataReader_DataReader.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReader - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReader - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_OpcDataReader_DataReader.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoInitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_DoInitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoUninitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_DoUninitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="GetReadInterval - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_GetReadInterval.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="IsActive - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_IsActive.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetActive - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetActive.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetCallback - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetCallback.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetConfiguration - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetConfiguration.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetData - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetData.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetOpcConnectionHolder - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetOpcConnectionHolder.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetReadInterval - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetReadInterval.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DataReaderActivator - класс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReaderActivator - конструктор">
+          <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator__ctor.htm">
+        </OBJECT></LI>
+      </UL>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReaderActivator - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoInitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_DoInitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="DoUninitialize - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_DoUninitialize.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetActivationItemName - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_SetActivationItemName.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetDataReader - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_SetDataReader.htm">
+          </OBJECT></LI>
+        </UL>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="SetOpcConnection - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_SetOpcConnection.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DataReaderCallback - интерфейс">
+        <param name="Local" value="html\T_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderCallback.htm">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="DataReaderCallback - методы">
+          <param name="Local" value="html\Methods_T_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderCallback.htm">
+        </OBJECT></LI>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="OnReadedData - метод">
+            <param name="Local" value="html\M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderCallback_OnReadedData.htm">
+          </OBJECT></LI>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+  </BODY>
+</HTML>

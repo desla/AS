@@ -1,0 +1,777 @@
+--
+-- Create Schema Script 
+--   Database Version   : 10.2.0.4.0 
+--   Toad Version       : 11.0.0.116 
+--   DB Connect String  : SAZ 
+--   Schema             : WAGSTAFF 
+--   Script Created by  : SYSTEM 
+--   Script Created at  : 26.01.2015 23:19:45 
+--   Physical Location  :  
+--   Notes              :  
+--
+
+-- Object Counts: 
+--   Roles: 1           Roles: 0            Obj Privs: 0 
+--   Users: 1           Roles: 1            Tablespace Quotas: 1 
+-- 
+--   Indexes: 14        Columns: 19         
+--   Sequences: 6 
+--   Tables: 6          Columns: 27         Constraints: 17     
+--   Triggers: 6 
+
+
+-- "Set define off" turns off substitution variables. 
+Set define off; 
+
+
+--
+-- WAGSTAFF  (User) 
+--
+CREATE USER WAGSTAFF
+  IDENTIFIED BY VALUES '25C8879210F08D89'
+  DEFAULT TABLESPACE CHIS
+  TEMPORARY TABLESPACE TEMP
+  PROFILE DEFAULT
+  ACCOUNT UNLOCK;
+  -- 1 Role for WAGSTAFF 
+  GRANT CONNECT TO WAGSTAFF;
+  ALTER USER WAGSTAFF DEFAULT ROLE ALL;
+  -- 1 Tablespace Quota for WAGSTAFF 
+  ALTER USER WAGSTAFF QUOTA UNLIMITED ON CHIS;
+
+
+--
+-- TYPE_INFO_SEQ  (Sequence) 
+--
+CREATE SEQUENCE WAGSTAFF.TYPE_INFO_SEQ
+  START WITH 1
+  MAXVALUE 9999999999999999999999999999
+  MINVALUE 1
+  NOCYCLE
+  NOCACHE
+  NOORDER;
+
+
+--
+-- RECIPE_INFO_SEQ  (Sequence) 
+--
+CREATE SEQUENCE WAGSTAFF.RECIPE_INFO_SEQ
+  START WITH 1
+  MAXVALUE 9999999999999999999999999999
+  MINVALUE 1
+  NOCYCLE
+  NOCACHE
+  NOORDER;
+
+
+--
+-- OBJECT_INFO_SEQ  (Sequence) 
+--
+CREATE SEQUENCE WAGSTAFF.OBJECT_INFO_SEQ
+  START WITH 1
+  MAXVALUE 9999999999999999999999999999
+  MINVALUE 1
+  NOCYCLE
+  NOCACHE
+  NOORDER;
+
+
+--
+-- DATA_VALUE_SEQ  (Sequence) 
+--
+CREATE SEQUENCE WAGSTAFF.DATA_VALUE_SEQ
+  START WITH 1
+  MAXVALUE 9999999999999999999999999999
+  MINVALUE 1
+  NOCYCLE
+  CACHE 20
+  NOORDER;
+
+
+--
+-- DATA_INFO_SEQ  (Sequence) 
+--
+CREATE SEQUENCE WAGSTAFF.DATA_INFO_SEQ
+  START WITH 1
+  MAXVALUE 9999999999999999999999999999
+  MINVALUE 1
+  NOCYCLE
+  NOCACHE
+  NOORDER;
+
+
+--
+-- CAST_SCHEDULE_SEQ  (Sequence) 
+--
+CREATE SEQUENCE WAGSTAFF.CAST_SCHEDULE_SEQ
+  START WITH 1
+  MAXVALUE 9999999999999999999999999999
+  MINVALUE 1
+  NOCYCLE
+  NOCACHE
+  NOORDER;
+
+
+--
+-- TYPE_INFO  (Table) 
+--
+CREATE TABLE WAGSTAFF.TYPE_INFO
+(
+  ID           NUMBER(3)                        NOT NULL,
+  NAME         VARCHAR2(64 BYTE)                NOT NULL,
+  DESCRIPTION  VARCHAR2(200 BYTE)
+)
+TABLESPACE CHIS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+NOCOMPRESS ;
+
+
+--
+-- DATA_INFO  (Table) 
+--
+CREATE TABLE WAGSTAFF.DATA_INFO
+(
+  ID            NUMBER(5)                       NOT NULL,
+  NAME          VARCHAR2(64 BYTE)               NOT NULL,
+  DESCRIPTION   VARCHAR2(200 BYTE),
+  TYPE_INFO_ID  NUMBER(3)                       NOT NULL
+)
+TABLESPACE CHIS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+NOCOMPRESS ;
+
+
+--
+-- OBJECT_INFO  (Table) 
+--
+CREATE TABLE WAGSTAFF.OBJECT_INFO
+(
+  ID            NUMBER(5)                       NOT NULL,
+  TYPE_INFO_ID  NUMBER(3)                       NOT NULL,
+  NAME          VARCHAR2(64 BYTE)               NOT NULL,
+  DESCRIPTION   VARCHAR2(200 BYTE)
+)
+TABLESPACE CHIS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+NOCOMPRESS ;
+
+
+--
+-- DATA_VALUE  (Table) 
+--
+CREATE TABLE WAGSTAFF.DATA_VALUE
+(
+  ID              NUMBER(10)                    NOT NULL,
+  DATA_INFO_ID    NUMBER(5)                     NOT NULL,
+  OBJECT_INFO_ID  NUMBER(5)                     NOT NULL,
+  VALUE_TIME      TIMESTAMP(6)                  NOT NULL,
+  VALUE           NUMBER                        NOT NULL
+)
+TABLESPACE CHIS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+NOCOMPRESS ;
+
+
+--
+-- RECIPE_INFO  (Table) 
+--
+CREATE TABLE WAGSTAFF.RECIPE_INFO
+(
+  ID             NUMBER(5)                      NOT NULL,
+  NAME           VARCHAR2(64 BYTE)              NOT NULL,
+  REVISION       NUMBER(3)                      NOT NULL,
+  CREATION_TIME  TIMESTAMP(6)                   DEFAULT systimestamp          NOT NULL,
+  ARCHIVED       NUMBER(1)                      DEFAULT 0                     NOT NULL
+)
+TABLESPACE CHIS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+NOCOMPRESS ;
+
+COMMENT ON TABLE WAGSTAFF.RECIPE_INFO IS 'Справочник рецептов';
+
+COMMENT ON COLUMN WAGSTAFF.RECIPE_INFO.ID IS 'ID рецепта';
+
+COMMENT ON COLUMN WAGSTAFF.RECIPE_INFO.NAME IS 'Наименование рецепта';
+
+COMMENT ON COLUMN WAGSTAFF.RECIPE_INFO.REVISION IS 'Ревизия рецепта';
+
+COMMENT ON COLUMN WAGSTAFF.RECIPE_INFO.CREATION_TIME IS 'Дата создания рецепта';
+
+COMMENT ON COLUMN WAGSTAFF.RECIPE_INFO.ARCHIVED IS 'Архивный (0=действующий, 1=архивный)';
+
+
+
+--
+-- CAST_SCHEDULE  (Table) 
+--
+CREATE TABLE WAGSTAFF.CAST_SCHEDULE
+(
+  ID              NUMBER(10)                    NOT NULL,
+  CAST_NUMBER     VARCHAR2(64 BYTE)             NOT NULL,
+  RECIPE_ID       NUMBER(5)                     NOT NULL,
+  CREATION_TIME   TIMESTAMP(6)                  DEFAULT systimestamp          NOT NULL,
+  SCHEDULE_STATE  NUMBER(1)                     DEFAULT 0                     NOT NULL,
+  PRIORITY        NUMBER(3)                     DEFAULT 0                     NOT NULL
+)
+TABLESPACE CHIS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+NOCOMPRESS ;
+
+COMMENT ON TABLE WAGSTAFF.CAST_SCHEDULE IS 'Задание на литьё';
+
+COMMENT ON COLUMN WAGSTAFF.CAST_SCHEDULE.ID IS 'ID задания';
+
+COMMENT ON COLUMN WAGSTAFF.CAST_SCHEDULE.CAST_NUMBER IS 'Наименование рецепта';
+
+COMMENT ON COLUMN WAGSTAFF.CAST_SCHEDULE.RECIPE_ID IS 'Ревизия рецепта';
+
+COMMENT ON COLUMN WAGSTAFF.CAST_SCHEDULE.CREATION_TIME IS 'Дата создания';
+
+COMMENT ON COLUMN WAGSTAFF.CAST_SCHEDULE.SCHEDULE_STATE IS 'Состояние (0=не передана, 1=передана, 2=ошибка передачи)';
+
+COMMENT ON COLUMN WAGSTAFF.CAST_SCHEDULE.PRIORITY IS 'Приоритет';
+
+
+
+--
+-- TYPE_INFO_PK  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.TYPE_INFO_PK ON WAGSTAFF.TYPE_INFO
+(ID)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- TYPE_INFO_UN_NAME  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.TYPE_INFO_UN_NAME ON WAGSTAFF.TYPE_INFO
+(NAME)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- DATA_INFO_PK  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.DATA_INFO_PK ON WAGSTAFF.DATA_INFO
+(ID)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- DATA_INFO_UN_TYPE_INFO_NAME  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.DATA_INFO_UN_TYPE_INFO_NAME ON WAGSTAFF.DATA_INFO
+(TYPE_INFO_ID, NAME)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- OBJECT_INFO_PK  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.OBJECT_INFO_PK ON WAGSTAFF.OBJECT_INFO
+(ID)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- OBJECT_INFO_UN_TYPE_INFO_NAME  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.OBJECT_INFO_UN_TYPE_INFO_NAME ON WAGSTAFF.OBJECT_INFO
+(TYPE_INFO_ID, NAME)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- DATA_VALUE_PK  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.DATA_VALUE_PK ON WAGSTAFF.DATA_VALUE
+(ID)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- DATA_VALUE_UN_DI_OI_VT  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.DATA_VALUE_UN_DI_OI_VT ON WAGSTAFF.DATA_VALUE
+(DATA_INFO_ID, OBJECT_INFO_ID, VALUE_TIME)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- RECIPE_INFO_PK  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.RECIPE_INFO_PK ON WAGSTAFF.RECIPE_INFO
+(ID)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- RECIPE_INFO_UN_NAME_REVISION  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.RECIPE_INFO_UN_NAME_REVISION ON WAGSTAFF.RECIPE_INFO
+(NAME, REVISION)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- CAST_SCHEDULE_PK  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.CAST_SCHEDULE_PK ON WAGSTAFF.CAST_SCHEDULE
+(ID)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- RECIPE_INFO_ARCHIVED  (Index) 
+--
+CREATE INDEX WAGSTAFF.RECIPE_INFO_ARCHIVED ON WAGSTAFF.RECIPE_INFO
+(ARCHIVED)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- CAST_SCHEDULE_STATE  (Index) 
+--
+CREATE INDEX WAGSTAFF.CAST_SCHEDULE_STATE ON WAGSTAFF.CAST_SCHEDULE
+(SCHEDULE_STATE)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- CAST_SCHEDULE_UN_CAST_NUMBER  (Index) 
+--
+CREATE UNIQUE INDEX WAGSTAFF.CAST_SCHEDULE_UN_CAST_NUMBER ON WAGSTAFF.CAST_SCHEDULE
+(CAST_NUMBER)
+TABLESPACE CHIS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+
+--
+-- TYPE_INFO_BI  (Trigger) 
+--
+CREATE OR REPLACE TRIGGER WAGSTAFF.TYPE_INFO_BI 
+  before insert on Wagstaff.Type_Info              
+  for each row
+begin  
+  if :new.ID is null then
+    select Wagstaff.Type_Info_Seq.NextVal into :new.ID from dual;
+  end if;
+end;
+/
+
+
+--
+-- RECIPE_INFO_BI  (Trigger) 
+--
+CREATE OR REPLACE TRIGGER WAGSTAFF.RECIPE_INFO_BI
+  before insert on Wagstaff.RECIPE_INFO           
+  for each row
+begin  
+  if :new.ID is null then
+    select Wagstaff.Recipe_Info_Seq.NextVal into :new.ID from dual;
+  end if;
+end;
+/
+
+
+--
+-- OBJECT_INFO_BI  (Trigger) 
+--
+CREATE OR REPLACE TRIGGER WAGSTAFF.OBJECT_INFO_BI
+  before insert on Wagstaff.OBJECT_INFO            
+  for each row
+begin  
+  if :new.ID is null then
+    select Wagstaff.Object_Info_Seq.NextVal into :new.ID from dual;
+  end if;
+end;
+/
+
+
+--
+-- DATA_VALUE_BI  (Trigger) 
+--
+CREATE OR REPLACE TRIGGER WAGSTAFF.DATA_VALUE_BI 
+  before insert on Wagstaff.DATA_VALUE              
+  for each row
+begin  
+  if :new.ID is null then
+    select Wagstaff.Data_Value_Seq.NextVal into :new.ID from dual;
+  end if;
+end;
+/
+
+
+--
+-- DATA_INFO_BI  (Trigger) 
+--
+CREATE OR REPLACE TRIGGER WAGSTAFF.DATA_INFO_BI
+  before insert on Wagstaff.DATA_INFO              
+  for each row
+begin  
+  if :new.ID is null then
+    select Wagstaff.Data_Info_Seq.NextVal into :new.ID from dual;
+  end if;
+end;
+/
+
+
+--
+-- BI_CAST_SCHEDULE  (Trigger) 
+--
+CREATE OR REPLACE TRIGGER WAGSTAFF.BI_CAST_SCHEDULE  
+  before insert on Wagstaff.CAST_SCHEDULE              
+  for each row
+begin  
+  if :new.ID is null then
+    select Wagstaff.Cast_Schedule_Seq.NextVal into :new.ID from dual;
+  end if;
+end;
+/
+
+
+-- 
+-- Non Foreign Key Constraints for Table TYPE_INFO 
+-- 
+ALTER TABLE WAGSTAFF.TYPE_INFO ADD (
+  CONSTRAINT TYPE_INFO_PK
+  PRIMARY KEY
+  (ID)
+  USING INDEX WAGSTAFF.TYPE_INFO_PK
+  ENABLE VALIDATE);
+
+ALTER TABLE WAGSTAFF.TYPE_INFO ADD (
+  CONSTRAINT TYPE_INFO_UN_NAME
+  UNIQUE (NAME)
+  USING INDEX WAGSTAFF.TYPE_INFO_UN_NAME
+  ENABLE VALIDATE);
+
+
+-- 
+-- Non Foreign Key Constraints for Table DATA_INFO 
+-- 
+ALTER TABLE WAGSTAFF.DATA_INFO ADD (
+  CONSTRAINT DATA_INFO_PK
+  PRIMARY KEY
+  (ID)
+  USING INDEX WAGSTAFF.DATA_INFO_PK
+  ENABLE VALIDATE);
+
+ALTER TABLE WAGSTAFF.DATA_INFO ADD (
+  CONSTRAINT DATA_INFO_UN_TYPE_INFO_NAME
+  UNIQUE (TYPE_INFO_ID, NAME)
+  USING INDEX WAGSTAFF.DATA_INFO_UN_TYPE_INFO_NAME
+  ENABLE VALIDATE);
+
+
+-- 
+-- Non Foreign Key Constraints for Table OBJECT_INFO 
+-- 
+ALTER TABLE WAGSTAFF.OBJECT_INFO ADD (
+  CONSTRAINT OBJECT_INFO_PK
+  PRIMARY KEY
+  (ID)
+  USING INDEX WAGSTAFF.OBJECT_INFO_PK
+  ENABLE VALIDATE);
+
+ALTER TABLE WAGSTAFF.OBJECT_INFO ADD (
+  CONSTRAINT OBJECT_INFO_UN_TYPE_INFO_NAME
+  UNIQUE (TYPE_INFO_ID, NAME)
+  USING INDEX WAGSTAFF.OBJECT_INFO_UN_TYPE_INFO_NAME
+  ENABLE VALIDATE);
+
+
+-- 
+-- Non Foreign Key Constraints for Table DATA_VALUE 
+-- 
+ALTER TABLE WAGSTAFF.DATA_VALUE ADD (
+  CONSTRAINT DATA_VALUE_PK
+  PRIMARY KEY
+  (ID)
+  USING INDEX WAGSTAFF.DATA_VALUE_PK
+  ENABLE VALIDATE);
+
+ALTER TABLE WAGSTAFF.DATA_VALUE ADD (
+  CONSTRAINT DATA_VALUE_UN_DI_OI_VT
+  UNIQUE (DATA_INFO_ID, OBJECT_INFO_ID, VALUE_TIME)
+  USING INDEX WAGSTAFF.DATA_VALUE_UN_DI_OI_VT
+  ENABLE VALIDATE);
+
+
+-- 
+-- Non Foreign Key Constraints for Table RECIPE_INFO 
+-- 
+ALTER TABLE WAGSTAFF.RECIPE_INFO ADD (
+  CONSTRAINT RECIPE_INFO_PK
+  PRIMARY KEY
+  (ID)
+  USING INDEX WAGSTAFF.RECIPE_INFO_PK
+  ENABLE VALIDATE);
+
+ALTER TABLE WAGSTAFF.RECIPE_INFO ADD (
+  CONSTRAINT RECIPE_INFO_UN_NAME_REVISION
+  UNIQUE (NAME, REVISION)
+  USING INDEX WAGSTAFF.RECIPE_INFO_UN_NAME_REVISION
+  ENABLE VALIDATE);
+
+
+-- 
+-- Non Foreign Key Constraints for Table CAST_SCHEDULE 
+-- 
+ALTER TABLE WAGSTAFF.CAST_SCHEDULE ADD (
+  CONSTRAINT CAST_SCHEDULE_PK
+  PRIMARY KEY
+  (ID)
+  USING INDEX WAGSTAFF.CAST_SCHEDULE_PK
+  ENABLE VALIDATE);
+
+ALTER TABLE WAGSTAFF.CAST_SCHEDULE ADD (
+  CONSTRAINT CAST_SCHEDULE_UN_CAST_NUMBER
+  UNIQUE (CAST_NUMBER)
+  USING INDEX WAGSTAFF.CAST_SCHEDULE_UN_CAST_NUMBER
+  ENABLE VALIDATE);
+
+
+-- 
+-- Foreign Key Constraints for Table DATA_INFO 
+-- 
+ALTER TABLE WAGSTAFF.DATA_INFO ADD (
+  CONSTRAINT DATA_INFO_FK_TYPE_INFO 
+  FOREIGN KEY (TYPE_INFO_ID) 
+  REFERENCES WAGSTAFF.TYPE_INFO (ID)
+  ENABLE VALIDATE);
+
+
+-- 
+-- Foreign Key Constraints for Table OBJECT_INFO 
+-- 
+ALTER TABLE WAGSTAFF.OBJECT_INFO ADD (
+  CONSTRAINT OBJECT_INFO_FK_TYPE_INFO 
+  FOREIGN KEY (TYPE_INFO_ID) 
+  REFERENCES WAGSTAFF.TYPE_INFO (ID)
+  ENABLE VALIDATE);
+
+
+-- 
+-- Foreign Key Constraints for Table DATA_VALUE 
+-- 
+ALTER TABLE WAGSTAFF.DATA_VALUE ADD (
+  CONSTRAINT DATA_VALUE_FK_DATA_INFO 
+  FOREIGN KEY (DATA_INFO_ID) 
+  REFERENCES WAGSTAFF.DATA_INFO (ID)
+  ENABLE VALIDATE);
+
+ALTER TABLE WAGSTAFF.DATA_VALUE ADD (
+  CONSTRAINT DATA_VALUE_FK_OBJECT_INFO 
+  FOREIGN KEY (OBJECT_INFO_ID) 
+  REFERENCES WAGSTAFF.OBJECT_INFO (ID)
+  ENABLE VALIDATE);
+
+
+-- 
+-- Foreign Key Constraints for Table CAST_SCHEDULE 
+-- 
+ALTER TABLE WAGSTAFF.CAST_SCHEDULE ADD (
+  CONSTRAINT CAST_SCHEDULE_FK_RECIPE_INFO 
+  FOREIGN KEY (RECIPE_ID) 
+  REFERENCES WAGSTAFF.RECIPE_INFO (ID)
+  ENABLE VALIDATE);

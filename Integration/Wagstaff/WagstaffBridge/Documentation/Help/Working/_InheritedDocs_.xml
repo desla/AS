@@ -1,0 +1,19 @@
+<doc>
+  <assembly>
+    <name>_InheritedDocs_</name>
+  </assembly>
+  <members>
+  <member name="M:Alvasoft.Utils.Activity.InitializableImpl.IsInitialized">
+  
+<summary>
+            Состоянии инициализации.
+            </summary><returns><code>true</code>, если инициализован.</returns></member><member name="M:Alvasoft.Utils.Activity.InitializableImpl.Initialize">
+  
+<summary>
+            Инициализация.
+            </summary><exception cref="T:Alvasoft.Utils.Activity.InitializedException">Если уже инициализован.</exception></member><member name="M:Alvasoft.Utils.Activity.InitializableImpl.Uninitialize">
+  
+<summary>
+            Деинициализация.
+            </summary><exception cref="T:Alvasoft.Utils.Activity.NotInitializedException">Если не инициализован.</exception></member></members>
+</doc>

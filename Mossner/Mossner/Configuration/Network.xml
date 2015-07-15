@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>  
+  <ITS_Oracle>
+    <!--Настройка сетевого доступа к серверу ИТЦ. БД Oracle.-->    
+    <Host>ARTALEX-94BF2C8</Host>
+    <User>customer</User>
+    <Password>customer</Password>
+    <!--Интервал времени, через который будет происходить попытка переподключения в случае потери связи-->
+    <ReconnectionInterval>10000</ReconnectionInterval>
+  </ITS_Oracle>
+  <OPC>
+    <!--Настройка доступа к OPC-серверу-->
+    <Host>ARTALEX-94BF2C8</Host>
+    <Server>RSLinx OPC Server</Server>
+    <TopicName>[MOSSNER2]</TopicName>
+    <!--Интервал времени, через который будет происходить попытка переподключения в случае потери связи-->
+    <ReconnectionInterval>10000</ReconnectionInterval>
+  </OPC>
+</configuration>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<configuration>
+  <login>Pup</login>
+  <bitReverse>true</bitReverse>
+  <timeControllerConfiguration>Configurations\TimeController.xml</timeControllerConfiguration>
+  <mapSoundsConfiguration>Configurations\MapSounds.xml</mapSoundsConfiguration>
+  <wavFilesFolder>Wav</wavFilesFolder>
+  <voiceGenerator>
+    <voice>RHVoice Elena (Russian)</voice>
+    <rate>-1</rate>
+    <samplePerSecond>22050</samplePerSecond>
+  </voiceGenerator>
+  <outputDevices>
+		<device>
+			<name>Динамики (Устройство с поддержк</name>
+			<channels>
+				<channel>
+					<id>1</id>
+					<name>1-1</name>
+					<deviceChannel>0</deviceChannel>
+					<group>1</group>
+				</channel>
+				<channel>
+					<id>2</id>
+					<name>1-2</name>
+					<deviceChannel>1</deviceChannel>
+					<group>1</group>
+				</channel>
+			</channels>
+		</device>
+	</outputDevices>
+  <inputDevices>
+    <device>
+      <name>Микрофон (Устройство с поддержк</name>
+      <channels>
+        <channel>
+          <id>1</id>
+          <name>1-1</name>
+          <deviceChannel>0</deviceChannel>          
+        </channel>
+        <channel>
+          <id>2</id>
+          <name>1-2</name>
+          <deviceChannel>1</deviceChannel>          
+        </channel>
+      </channels>
+    </device>
+  </inputDevices>
+</configuration>

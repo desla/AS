@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configurations>
+  <prefix>Prefixs\TimePrefix.wav</prefix>
+  <configuration>
+    <everyMinutes>2</everyMinutes>
+    <channels>
+      <channelId>1</channelId>
+    </channels>
+  </configuration>
+  <configuration>
+    <everyMinutes>3</everyMinutes>
+    <channels>
+      <channelId>1</channelId>
+      <channelId>2</channelId>
+    </channels>
+  </configuration>
+</configurations>

@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topics>
+  <topic id="N:Alvasoft.Utils.Activity" project="_Namespaces" file="N_Alvasoft_Utils_Activity">
+    <topic id="T:Alvasoft.Utils.Activity.Initializable" project="WagstaffBridge" file="T_Alvasoft_Utils_Activity_Initializable">
+      <topic id="Methods.T:Alvasoft.Utils.Activity.Initializable" project="WagstaffBridge" file="Methods_T_Alvasoft_Utils_Activity_Initializable">
+        <topic id="M:Alvasoft.Utils.Activity.Initializable.Initialize" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_Initializable_Initialize" />
+        <topic id="M:Alvasoft.Utils.Activity.Initializable.IsInitialized" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_Initializable_IsInitialized" />
+        <topic id="M:Alvasoft.Utils.Activity.Initializable.Uninitialize" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_Initializable_Uninitialize" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.Utils.Activity.InitializableImpl" project="WagstaffBridge" file="T_Alvasoft_Utils_Activity_InitializableImpl">
+      <topic id="M:Alvasoft.Utils.Activity.InitializableImpl.#ctor" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializableImpl__ctor" />
+      <topic id="Methods.T:Alvasoft.Utils.Activity.InitializableImpl" project="WagstaffBridge" file="Methods_T_Alvasoft_Utils_Activity_InitializableImpl">
+        <topic id="M:Alvasoft.Utils.Activity.InitializableImpl.CheckInitialized" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializableImpl_CheckInitialized" />
+        <topic id="M:Alvasoft.Utils.Activity.InitializableImpl.CheckNotInitialized" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializableImpl_CheckNotInitialized" />
+        <topic id="M:Alvasoft.Utils.Activity.InitializableImpl.DoInitialize" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializableImpl_DoInitialize" />
+        <topic id="M:Alvasoft.Utils.Activity.InitializableImpl.DoUninitialize" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializableImpl_DoUninitialize" />
+        <topic id="M:Alvasoft.Utils.Activity.InitializableImpl.Initialize" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializableImpl_Initialize" />
+        <topic id="M:Alvasoft.Utils.Activity.InitializableImpl.IsInitialized" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializableImpl_IsInitialized" />
+        <topic id="M:Alvasoft.Utils.Activity.InitializableImpl.Uninitialize" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializableImpl_Uninitialize" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.Utils.Activity.InitializedException" project="WagstaffBridge" file="T_Alvasoft_Utils_Activity_InitializedException">
+      <topic id="M:Alvasoft.Utils.Activity.InitializedException.#ctor" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_InitializedException__ctor" />
+      <topic id="Methods.T:Alvasoft.Utils.Activity.InitializedException" project="WagstaffBridge" file="Methods_T_Alvasoft_Utils_Activity_InitializedException" />
+      <topic id="Properties.T:Alvasoft.Utils.Activity.InitializedException" project="WagstaffBridge" file="Properties_T_Alvasoft_Utils_Activity_InitializedException" />
+      <topic id="Events.T:Alvasoft.Utils.Activity.InitializedException" project="WagstaffBridge" file="Events_T_Alvasoft_Utils_Activity_InitializedException" />
+    </topic>
+    <topic id="T:Alvasoft.Utils.Activity.NotInitializedException" project="WagstaffBridge" file="T_Alvasoft_Utils_Activity_NotInitializedException">
+      <topic id="M:Alvasoft.Utils.Activity.NotInitializedException.#ctor" project="WagstaffBridge" file="M_Alvasoft_Utils_Activity_NotInitializedException__ctor" />
+      <topic id="Methods.T:Alvasoft.Utils.Activity.NotInitializedException" project="WagstaffBridge" file="Methods_T_Alvasoft_Utils_Activity_NotInitializedException" />
+      <topic id="Properties.T:Alvasoft.Utils.Activity.NotInitializedException" project="WagstaffBridge" file="Properties_T_Alvasoft_Utils_Activity_NotInitializedException" />
+      <topic id="Events.T:Alvasoft.Utils.Activity.NotInitializedException" project="WagstaffBridge" file="Events_T_Alvasoft_Utils_Activity_NotInitializedException" />
+    </topic>
+  </topic>
+  <topic id="N:Alvasoft.WagstaffBridge" project="_Namespaces" file="N_Alvasoft_WagstaffBridge">
+    <topic id="T:Alvasoft.WagstaffBridge.CastSchedule" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_CastSchedule">
+      <topic id="M:Alvasoft.WagstaffBridge.CastSchedule.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_CastSchedule__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.CastSchedule" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_CastSchedule" />
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.CastSchedule" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_CastSchedule">
+        <topic id="P:Alvasoft.WagstaffBridge.CastSchedule.CastNumber" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_CastSchedule_CastNumber" />
+        <topic id="P:Alvasoft.WagstaffBridge.CastSchedule.Id" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_CastSchedule_Id" />
+        <topic id="P:Alvasoft.WagstaffBridge.CastSchedule.Priority" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_CastSchedule_Priority" />
+        <topic id="P:Alvasoft.WagstaffBridge.CastSchedule.RecipeName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_CastSchedule_RecipeName" />
+        <topic id="P:Alvasoft.WagstaffBridge.CastSchedule.RecipeRevision" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_CastSchedule_RecipeRevision" />
+        <topic id="P:Alvasoft.WagstaffBridge.CastSchedule.ScheduleState" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_CastSchedule_ScheduleState" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.CastScheduleExport" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_CastScheduleExport">
+      <topic id="M:Alvasoft.WagstaffBridge.CastScheduleExport.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_CastScheduleExport__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.CastScheduleExport" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_CastScheduleExport">
+        <topic id="M:Alvasoft.WagstaffBridge.CastScheduleExport.SetActive(System.Boolean)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_CastScheduleExport_SetActive" />
+        <topic id="M:Alvasoft.WagstaffBridge.CastScheduleExport.SetCheckingInterval(System.Double)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_CastScheduleExport_SetCheckingInterval" />
+        <topic id="M:Alvasoft.WagstaffBridge.CastScheduleExport.SetOracleConnection(Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_CastScheduleExport_SetOracleConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.CastScheduleExport.SetSqlConnection(Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_CastScheduleExport_SetSqlConnection" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.DataBuffer" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_DataBuffer">
+      <topic id="M:Alvasoft.WagstaffBridge.DataBuffer.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataBuffer__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.DataBuffer" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_DataBuffer">
+        <topic id="M:Alvasoft.WagstaffBridge.DataBuffer.SetActive(System.Boolean)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataBuffer_SetActive" />
+        <topic id="M:Alvasoft.WagstaffBridge.DataBuffer.SetAttemptsInterval(System.Double)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataBuffer_SetAttemptsInterval" />
+        <topic id="M:Alvasoft.WagstaffBridge.DataBuffer.SetConfiguration(Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataBuffer_SetConfiguration" />
+        <topic id="M:Alvasoft.WagstaffBridge.DataBuffer.SetDataWriter(Alvasoft.WagstaffBridge.DataWriter)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataBuffer_SetDataWriter" />
+        <topic id="M:Alvasoft.WagstaffBridge.DataBuffer.SetSqlConnection(Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataBuffer_SetSqlConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.DataBuffer.StoreData(Alvasoft.WagstaffBridge.DataValue)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataBuffer_StoreData" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.DataReadInfo" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_DataReadInfo">
+      <topic id="M:Alvasoft.WagstaffBridge.DataReadInfo.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataReadInfo__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.DataReadInfo" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_DataReadInfo" />
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.DataReadInfo" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_DataReadInfo">
+        <topic id="P:Alvasoft.WagstaffBridge.DataReadInfo.DataId" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataReadInfo_DataId" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataReadInfo.DataName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataReadInfo_DataName" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataReadInfo.ObjectId" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataReadInfo_ObjectId" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataReadInfo.ObjectName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataReadInfo_ObjectName" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataReadInfo.OpcItemName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataReadInfo_OpcItemName" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataReadInfo.TypeId" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataReadInfo_TypeId" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataReadInfo.TypeName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataReadInfo_TypeName" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.DataValue" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_DataValue">
+      <topic id="M:Alvasoft.WagstaffBridge.DataValue.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataValue__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.DataValue" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_DataValue" />
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.DataValue" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_DataValue">
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.DataId" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_DataId" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.DataName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_DataName" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.Id" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_Id" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.ObjectId" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_ObjectId" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.ObjectName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_ObjectName" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.TypeId" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_TypeId" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.TypeName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_TypeName" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.Value" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_Value" />
+        <topic id="P:Alvasoft.WagstaffBridge.DataValue.ValueTime" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_DataValue_ValueTime" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.DataWriter" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_DataWriter">
+      <topic id="M:Alvasoft.WagstaffBridge.DataWriter.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataWriter__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.DataWriter" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_DataWriter">
+        <topic id="M:Alvasoft.WagstaffBridge.DataWriter.SetOracleConnectionHolder(Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataWriter_SetOracleConnectionHolder" />
+        <topic id="M:Alvasoft.WagstaffBridge.DataWriter.TryWriteData(Alvasoft.WagstaffBridge.DataValue)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_DataWriter_TryWriteData" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.RecipeImport" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_RecipeImport">
+      <topic id="M:Alvasoft.WagstaffBridge.RecipeImport.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_RecipeImport__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.RecipeImport" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_RecipeImport">
+        <topic id="M:Alvasoft.WagstaffBridge.RecipeImport.GetLastImportedTime" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_RecipeImport_GetLastImportedTime" />
+        <topic id="M:Alvasoft.WagstaffBridge.RecipeImport.SetActive(System.Boolean)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_RecipeImport_SetActive" />
+        <topic id="M:Alvasoft.WagstaffBridge.RecipeImport.SetCheckingInterval(System.Double)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_RecipeImport_SetCheckingInterval" />
+        <topic id="M:Alvasoft.WagstaffBridge.RecipeImport.SetLastImportedTime(System.DateTime)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_RecipeImport_SetLastImportedTime" />
+        <topic id="M:Alvasoft.WagstaffBridge.RecipeImport.SetOracleConnection(Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_RecipeImport_SetOracleConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.RecipeImport.SetSqlConnection(Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_RecipeImport_SetSqlConnection" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.RecipeInfo" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_RecipeInfo">
+      <topic id="M:Alvasoft.WagstaffBridge.RecipeInfo.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_RecipeInfo__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.RecipeInfo" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_RecipeInfo" />
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.RecipeInfo" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_RecipeInfo">
+        <topic id="P:Alvasoft.WagstaffBridge.RecipeInfo.Alloy" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_RecipeInfo_Alloy" />
+        <topic id="P:Alvasoft.WagstaffBridge.RecipeInfo.CreationTime" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_RecipeInfo_CreationTime" />
+        <topic id="P:Alvasoft.WagstaffBridge.RecipeInfo.Id" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_RecipeInfo_Id" />
+        <topic id="P:Alvasoft.WagstaffBridge.RecipeInfo.IsArchived" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_RecipeInfo_IsArchived" />
+        <topic id="P:Alvasoft.WagstaffBridge.RecipeInfo.Name" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_RecipeInfo_Name" />
+        <topic id="P:Alvasoft.WagstaffBridge.RecipeInfo.Revision" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_RecipeInfo_Revision" />
+        <topic id="P:Alvasoft.WagstaffBridge.RecipeInfo.Technology" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_RecipeInfo_Technology" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.ScheduleState" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_ScheduleState" />
+    <topic id="T:Alvasoft.WagstaffBridge.WagstaffBridge" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_WagstaffBridge">
+      <topic id="M:Alvasoft.WagstaffBridge.WagstaffBridge.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_WagstaffBridge__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.WagstaffBridge" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_WagstaffBridge">
+        <topic id="M:Alvasoft.WagstaffBridge.WagstaffBridge.DoInitialize" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_WagstaffBridge_DoInitialize" />
+        <topic id="M:Alvasoft.WagstaffBridge.WagstaffBridge.DoUninitialize" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_WagstaffBridge_DoUninitialize" />
+        <topic id="M:Alvasoft.WagstaffBridge.WagstaffBridge.OnConnected(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_WagstaffBridge_OnConnected" />
+        <topic id="M:Alvasoft.WagstaffBridge.WagstaffBridge.OnDisconnected(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_WagstaffBridge_OnDisconnected" />
+        <topic id="M:Alvasoft.WagstaffBridge.WagstaffBridge.OnError(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase,System.Exception)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_WagstaffBridge_OnError" />
+        <topic id="M:Alvasoft.WagstaffBridge.WagstaffBridge.OnReadedData(Alvasoft.WagstaffBridge.DataValue)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_WagstaffBridge_OnReadedData" />
+      </topic>
+    </topic>
+  </topic>
+  <topic id="N:Alvasoft.WagstaffBridge.BridgeConfiguration" project="_Namespaces" file="N_Alvasoft_WagstaffBridge_BridgeConfiguration">
+    <topic id="T:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration">
+      <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration">
+        <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.LoadFromXmlNode(System.Xml.XmlNode)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_LoadFromXmlNode" />
+      </topic>
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration">
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.Database" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_Database" />
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.Host" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_Host" />
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.Password" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_Password" />
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.ReconnectionInterval" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_ReconnectionInterval" />
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.ServerName" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_ServerName" />
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration.User" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_ConnectionConfiguration_User" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration">
+      <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration">
+        <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration.LoadFromXmlNode(System.Xml.XmlNode)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration_LoadFromXmlNode" />
+        <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration.SetIdsToOpcItems(System.Collections.Generic.List{Alvasoft.WagstaffBridge.DataReadInfo})" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration_SetIdsToOpcItems" />
+      </topic>
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration">
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration.DataInfo" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration_DataInfo" />
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration.ReadInterval" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_DataReaderConfiguration_ReadInterval" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration">
+      <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration__ctor" />
+      <topic id="Fields.T:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration" project="WagstaffBridge" file="Fields_T_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration">
+        <topic id="F:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.bufSqlConfiguration" project="WagstaffBridge" file="F_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_bufSqlConfiguration" />
+        <topic id="F:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.opcConfiguration" project="WagstaffBridge" file="F_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_opcConfiguration" />
+        <topic id="F:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.oracleConfiguration" project="WagstaffBridge" file="F_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_oracleConfiguration" />
+        <topic id="F:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.wagsSqlConfiguration" project="WagstaffBridge" file="F_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_wagsSqlConfiguration" />
+      </topic>
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration">
+        <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.DoInitialize" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_DoInitialize" />
+        <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.LoadConnectionsConfiguration(System.String)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_LoadConnectionsConfiguration" />
+        <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.LoadOpcItemsConfiguration(System.String)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_LoadOpcItemsConfiguration" />
+        <topic id="M:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.SetOracleConnection(Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_SetOracleConnection" />
+      </topic>
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration">
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.DataInfo" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_DataInfo" />
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.MixerCurrdataConfiguration" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_MixerCurrdataConfiguration" />
+        <topic id="P:Alvasoft.WagstaffBridge.BridgeConfiguration.WagstaffBridgeConfiguration.WagstaffCurdataConfiguration" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_BridgeConfiguration_WagstaffBridgeConfiguration_WagstaffCurdataConfiguration" />
+      </topic>
+    </topic>
+  </topic>
+  <topic id="N:Alvasoft.WagstaffBridge.ConnectionHolder" project="_Namespaces" file="N_Alvasoft_WagstaffBridge_ConnectionHolder">
+    <topic id="T:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase">
+      <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase__ctor" />
+      <topic id="Fields.T:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase" project="WagstaffBridge" file="Fields_T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase">
+        <topic id="F:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.callback" project="WagstaffBridge" file="F_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_callback" />
+        <topic id="F:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.checkConnectionTimer" project="WagstaffBridge" file="F_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_checkConnectionTimer" />
+      </topic>
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase">
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.CloseConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_CloseConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.DangerousConnect" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_DangerousConnect" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.GetHolderName" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_GetHolderName" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.IsConnected" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_IsConnected" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.LockConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_LockConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.OpenConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_OpenConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.ProcessError(System.Exception)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_ProcessError" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.ReleaseConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_ReleaseConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetCallback(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetCallback" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetCheckConnectionInterval(System.Double)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetCheckConnectionInterval" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetHolderName(System.String)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetHolderName" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetLastOperationAllowedTime(System.Int32)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetLastOperationAllowedTime" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.SetReconnectionInterval(System.Double)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_SetReconnectionInterval" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.TestConnectionIsOpen" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_TestConnectionIsOpen" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.TryReconnect(System.Object,System.Timers.ElapsedEventArgs)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_TryReconnect" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.UpdateLastOperationTime" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_UpdateLastOperationTime" />
+      </topic>
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase">
+        <topic id="P:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase.IsConnectionProcessActive" project="WagstaffBridge" file="P_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderBase_IsConnectionProcessActive" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback">
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback">
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback.OnConnected(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback_OnConnected" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback.OnDisconnected(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback_OnDisconnected" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderCallback.OnError(Alvasoft.WagstaffBridge.ConnectionHolder.ConnectionHolderBase,System.Exception)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_ConnectionHolderCallback_OnError" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder">
+      <topic id="Overload:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.#ctor" project="WagstaffBridge" file="Overload_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder__ctor">
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.#ctor(Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder__ctor" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.#ctor(System.String,System.String,System.String,System.String)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder__ctor_1" />
+      </topic>
+      <topic id="Fields.T:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder" project="WagstaffBridge" file="Fields_T_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder">
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.CloseConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_CloseConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.DangerousConnect" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_DangerousConnect" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.GetSqlConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_GetSqlConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.IsConnected" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_IsConnected" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.ProcessError(System.Exception)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_ProcessError" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder.TestConnectionIsOpen" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder_TestConnectionIsOpen" />
+      </topic>
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.ConnectionHolder.MsSqlConnectionHolder" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_ConnectionHolder_MsSqlConnectionHolder" />
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder">
+      <topic id="Overload:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.#ctor" project="WagstaffBridge" file="Overload_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder__ctor">
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.#ctor(Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder__ctor" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.#ctor(System.String,System.String)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder__ctor_1" />
+      </topic>
+      <topic id="Fields.T:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder" project="WagstaffBridge" file="Fields_T_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder">
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.CloseConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_CloseConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.DangerousConnect" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_DangerousConnect" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.GetOpcServer" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_GetOpcServer" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.IsConnected" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_IsConnected" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.ProcessError(System.Exception)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_ProcessError" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder.TestConnectionIsOpen" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder_TestConnectionIsOpen" />
+      </topic>
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_ConnectionHolder_OpcConnectionHolder" />
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder">
+      <topic id="Overload:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.#ctor" project="WagstaffBridge" file="Overload_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder__ctor">
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.#ctor(Alvasoft.WagstaffBridge.BridgeConfiguration.ConnectionConfiguration)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder__ctor" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.#ctor(System.String,System.String,System.String)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder__ctor_1" />
+      </topic>
+      <topic id="Fields.T:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder" project="WagstaffBridge" file="Fields_T_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder">
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.CloseConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_CloseConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.DangerousConnect" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_DangerousConnect" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.GetOracleConnection" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_GetOracleConnection" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.IsConnected" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_IsConnected" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.ProcessError(System.Exception)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_ProcessError" />
+        <topic id="M:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder.TestConnectionIsOpen" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder_TestConnectionIsOpen" />
+      </topic>
+      <topic id="Properties.T:Alvasoft.WagstaffBridge.ConnectionHolder.OracleConnectionHolder" project="WagstaffBridge" file="Properties_T_Alvasoft_WagstaffBridge_ConnectionHolder_OracleConnectionHolder" />
+    </topic>
+  </topic>
+  <topic id="N:Alvasoft.WagstaffBridge.OpcDataReader" project="_Namespaces" file="N_Alvasoft_WagstaffBridge_OpcDataReader">
+    <topic id="T:Alvasoft.WagstaffBridge.OpcDataReader.DataReader" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_OpcDataReader_DataReader">
+      <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.OpcDataReader.DataReader" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_OpcDataReader_DataReader">
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.DoInitialize" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_DoInitialize" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.DoUninitialize" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_DoUninitialize" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.GetReadInterval" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_GetReadInterval" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.IsActive" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_IsActive" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetActive(System.Boolean)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetActive" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetCallback(Alvasoft.WagstaffBridge.OpcDataReader.DataReaderCallback)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetCallback" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetConfiguration(Alvasoft.WagstaffBridge.BridgeConfiguration.DataReaderConfiguration)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetConfiguration" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetData(Alvasoft.WagstaffBridge.DataReadInfo[])" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetData" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetOpcConnectionHolder(Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetOpcConnectionHolder" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReader.SetReadInterval(System.Double)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReader_SetReadInterval" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator">
+      <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.#ctor" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator__ctor" />
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator">
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.DoInitialize" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_DoInitialize" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.DoUninitialize" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_DoUninitialize" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.SetActivationItemName(System.String)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_SetActivationItemName" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.SetDataReader(Alvasoft.WagstaffBridge.OpcDataReader.DataReader)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_SetDataReader" />
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderActivator.SetOpcConnection(Alvasoft.WagstaffBridge.ConnectionHolder.OpcConnectionHolder)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderActivator_SetOpcConnection" />
+      </topic>
+    </topic>
+    <topic id="T:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderCallback" project="WagstaffBridge" file="T_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderCallback">
+      <topic id="Methods.T:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderCallback" project="WagstaffBridge" file="Methods_T_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderCallback">
+        <topic id="M:Alvasoft.WagstaffBridge.OpcDataReader.DataReaderCallback.OnReadedData(Alvasoft.WagstaffBridge.DataValue)" project="WagstaffBridge" file="M_Alvasoft_WagstaffBridge_OpcDataReader_DataReaderCallback_OnReadedData" />
+      </topic>
+    </topic>
+  </topic>
+</topics>
