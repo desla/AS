@@ -9,7 +9,7 @@ namespace Alvasoft.AudioServer.Configuration {
    /// Реализация описания группы каналов.
    /// </summary>
    public class ChannelGroupInfoImpl : IdentifiableImpl, ChannelGroupInfo {
-      private List<OutChannelInfoImpl> channels = new List<OutChannelInfoImpl>();
+      private List<OutputChannelInfoImpl> channels = new List<OutputChannelInfoImpl>();
 
       /// <summary>
       /// Конструктор по умолчанию.
@@ -23,12 +23,12 @@ namespace Alvasoft.AudioServer.Configuration {
       }
 
       /// <inheritdoc />
-      public OutChannelInfo GetChannel( int aIndex ) {
+      public OutputChannelInfo GetChannel( int aIndex ) {
          return channels.ElementAt( aIndex );
       }
 
       /// <returns>Каналы.</returns>
-      public List<OutChannelInfoImpl> GetChannels() {
+      public List<OutputChannelInfoImpl> GetChannels() {
          return channels;
       }
    }

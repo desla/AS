@@ -26,41 +26,32 @@
     <PresentationStyle>VS2010</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>MemberName</NamingMethod>
-    <HelpTitle>Инструкция программиста</HelpTitle>
+    <HelpTitle>Инструкция программиста для AudioServer</HelpTitle>
     <CopyrightText>%28c%29 ALVASOFT</CopyrightText>
     <ContentPlacement>BelowNamespaces</ContentPlacement>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\AudioServer\AudioServer.csproj" xmlns="" />
     </DocumentationSources>
     <NamespaceSummaries>
-      <NamespaceSummaryItem name="Alvasoft.AudioServer" isDocumented="True">Главное пространство имен.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.AudioServer.ChannelsManager" isDocumented="True">Пространство имен модуля управления каналами ввода/вывода.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.AudioServer.ChannelsManager.Impl" isDocumented="True">Реализация модуля управления каналами ввода/вывода.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.AudioServer.Communication" isDocumented="True">Реализация протокола сетевого взаимодействия с клиентами.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.AudioServer.Communication.CommandParsing" isDocumented="True">Разбор сетевых команд.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.AudioServer.Configuration" isDocumented="True">Конфигурация аудио-сервера.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.AudioServer.SoundsStorage" isDocumented="True">Модуль создания и хранения звуковых сообщений.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.AudioServer.SoundsStorage.Impl" isDocumented="True">Реализация модуля создания и хранения звуковых сообщений.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.AudioServer.TimesController" isDocumented="True">Модуль объявления времени.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.Tcp" isDocumented="True">Сетевое взаимодействие.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.Utils.Activity" isDocumented="True">Общие компоненты для разработки.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Alvasoft.Utils.Common" isDocumented="True">Общие компоненты для разработки.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="AudioServer" isDocumented="True">Корневое пространство имен.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="AudioServer.Alvasoft.AudioServer.Communication" isDocumented="False" />
-<NamespaceSummaryItem name="AudioServer.WinMM.Structures" isDocumented="True">Структуры для работы с ресурсами операционной системы при взаимодействии с устройствами ввода/вывода.</NamespaceSummaryItem></NamespaceSummaries>
-    <ProjectSummary>Инструкция программиста для ПО &amp;quot%3bАлгоритм согласования протокола обмена данными между системой синтеза речи и системой автоматической передачи голосовых сообщений корпусов электролиза, оснащенных АСУТП СААТ&amp;quot%3b
-&amp;lt%3bbr /&amp;gt%3b
-&amp;lt%3bbr /&amp;gt%3b
-ООО АльваСофт 2015</ProjectSummary>
-    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
-    <IndentHtml>False</IndentHtml>
-    <KeepLogFile>True</KeepLogFile>
-    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
-    <CppCommentsFixup>False</CppCommentsFixup>
-    <CleanIntermediates>True</CleanIntermediates>
-    <HeaderText>
-    </HeaderText>
+      <NamespaceSummaryItem name="Alvasoft.AudioServer" isDocumented="True" xmlns="">Главное пространство имен.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.ChannelsManager" isDocumented="True" xmlns="">Пространство имен модуля управления входными/выходными аудио-каналами.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.ChannelsManager.Impl" isDocumented="True" xmlns="">Конкретная реализация модуля управления входными/выходными аудио-каналами.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.ChannelsManager.Impl.Devices" isDocumented="True" xmlns="">Реализация модулей для работы с физическими устройствами ввода/вывода.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.Communication" isDocumented="True" xmlns="">Реализация протокола сетевого взаимодействия с клиентами сервера.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.Communication.CommandParsing" isDocumented="True" xmlns="">Реализация разбора полученной команды.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.Configuration" isDocumented="True" xmlns="">Реализация конфигурации аудио-сервера. Содержит все необходимые класс для настройки.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.SoundsStorage" isDocumented="True" xmlns="">Модуль для работы со звуками. Содержит в себе реализации генератора голоса, загрузки звуковых файлов и тд.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.SoundsStorage.Impl" isDocumented="True" xmlns="">Реализация модуля хранения звуковых сообщений.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.AudioServer.TimesController" isDocumented="True" xmlns="">Модуль для управления объявления времени.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.Tcp" isDocumented="True" xmlns="">Реализация сетевого взаимодействия.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.Utils.Activity" isDocumented="True" xmlns="">Содержит вспомогательные средства разработки.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Alvasoft.Utils.Common" isDocumented="True" xmlns="">Содержит вспомогательные средства разработки.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="AudioServer" isDocumented="False" xmlns="" />
+<NamespaceSummaryItem name="AudioServer.Alvasoft.AudioServer.Communication" isDocumented="False" xmlns="" />
+<NamespaceSummaryItem name="AudioServer.WinMM.Structures" isDocumented="True" xmlns="">Структуры для работы с устройствами средствами Windows.</NamespaceSummaryItem></NamespaceSummaries>
+    <ProjectSummary>Программное обеспечение &amp;#171%3bАудио сервер&amp;#187%3b
+
+ООО &amp;#171%3bАльваСофт&amp;#187%3b 2015</ProjectSummary>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

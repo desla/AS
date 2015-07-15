@@ -40,6 +40,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\AudioServer.XML</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -59,6 +60,10 @@
       <Private>True</Private>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NAudio\bin\Debug\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
@@ -74,11 +79,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alvasoft\AudioServer\AudioServer.cs" />
-    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\InChannel.cs" />
-    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\InputDevice.cs" />
-    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\OutChannel.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\Devices\AsioDeviceChannel.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\Devices\AsioInputDevice.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\Devices\AsioOutputDevice.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\Devices\IInputDevice.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\Devices\IOutputDevice.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\InputChannel.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\Devices\DefaultInputDevice.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\OutputChannel.cs" />
     <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\ChannelGroup.cs" />
-    <Compile Include="Alvasoft\AudioServer\ChannelsManager\ChannelManager.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\IChannelManager.cs" />
     <Compile Include="Alvasoft\AudioServer\ChannelsManager\ChannelManagerImpl.cs" />
     <Compile Include="Alvasoft\AudioServer\ChannelsManager\SoundMessage.cs" />
     <Compile Include="Alvasoft\AudioServer\Communication\AbstractClientSession.cs" />
@@ -97,16 +107,16 @@
     <Compile Include="Alvasoft\AudioServer\Communication\ServerListenerCallback.cs" />
     <Compile Include="Alvasoft\AudioServer\Configuration\ChannelGroupInfo.cs" />
     <Compile Include="Alvasoft\AudioServer\Configuration\ChannelGroupInfoImpl.cs" />
-    <Compile Include="Alvasoft\AudioServer\Configuration\InChannelInfo.cs" />
-    <Compile Include="Alvasoft\AudioServer\Configuration\InChannelInfoImpl.cs" />
+    <Compile Include="Alvasoft\AudioServer\Configuration\DeviceType.cs" />
+    <Compile Include="Alvasoft\AudioServer\Configuration\InputChannelInfo.cs" />
+    <Compile Include="Alvasoft\AudioServer\Configuration\InputChannelInfoImpl.cs" />
     <Compile Include="Alvasoft\AudioServer\Configuration\InputDeviceInfoImpl.cs" />
-    <Compile Include="Alvasoft\AudioServer\Configuration\OutChannelInfo.cs" />
-    <Compile Include="Alvasoft\AudioServer\Configuration\OutChannelInfoImpl.cs" />
-    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\OutputDevice.cs" />
+    <Compile Include="Alvasoft\AudioServer\Configuration\OutputChannelInfo.cs" />
+    <Compile Include="Alvasoft\AudioServer\Configuration\OutputChannelInfoImpl.cs" />
+    <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\Devices\DefaultOutputDevice.cs" />
     <Compile Include="Alvasoft\AudioServer\ChannelsManager\Impl\SoundsPriorityQueue.cs" />
     <Compile Include="Alvasoft\AudioServer\Configuration\InputDeviceInfo.cs" />
     <Compile Include="Alvasoft\AudioServer\Configuration\VoiceGeneratorInfo.cs" />
-    <Compile Include="Alvasoft\Utils\SoundPrefix.cs" />
     <Compile Include="Alvasoft\AudioServer\TimeController\TimeController.cs" />
     <Compile Include="Alvasoft\AudioServer\TimeController\TimeControllerCallback.cs" />
     <Compile Include="Alvasoft\AudioServer\TimeController\TimeControllerConfiguration.cs" />
@@ -197,6 +207,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

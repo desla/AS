@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Alvasoft.AudioServer.ChannelsManager.Impl.Devices;
 using Alvasoft.AudioServer.Configuration;
 using Alvasoft.AudioServer.ChannelsManager.Impl;
 
@@ -8,13 +9,14 @@ namespace Alvasoft.AudioServer.ChannelsManager
     /// <summary>
     /// Знает устройство инфраструктуры устройства Вывода + каналы + группы.
     /// </summary>
-    public class ChannelManagerImpl : ChannelManager, IDisposable
+    public class ChannelManagerImpl : IChannelManager, IDisposable
     {
-        private readonly List<OutChannel> outChannels = new List<OutChannel>();
-        private readonly List<OutputDevice> outputDevices = new List<OutputDevice>();
+        private readonly List<IOutputDevice> outputDevices = new List<IOutputDevice>();
+        private readonly List<OutputChannel> outChannels = new List<OutputChannel>();        
         private readonly List<ChannelGroup> groups = new List<ChannelGroup>();
-        private readonly List<InputDevice> inputDevices = new List<InputDevice>();
-        private readonly List<InChannel> inChannels = new List<InChannel>();        
+
+        private readonly List<IInputDevice> inputDevices = new List<IInputDevice>();
+        private readonly List<InputChannel> inChannels = new List<InputChannel>();        
 
         private ServerConfiguration configuration;
 
@@ -52,7 +54,7 @@ namespace Alvasoft.AudioServer.ChannelsManager
             }
         }
 
-        public OutChannel GetChannelById(int aChannelId)
+        public OutputChannel GetChannelById(int aChannelId)
         {
             foreach (var channel in outChannels) {
                 if (channel.GetChannelInfo().GetId() == aChannelId) {
@@ -152,7 +154,16 @@ namespace Alvasoft.AudioServer.ChannelsManager
             var deviceCound = configuration.GetInputDevicesCount();
             for (var deviceIndex = 0; deviceIndex < deviceCound; ++deviceIndex) {
                 var deviceInfo = configuration.GetInputDevice(deviceIndex);
-                var device = InputDevice.FindPhysicalDeviceByName(deviceInfo.GetName());
+                IInputDevice device = null;                
+                switch (deviceInfo.GetDeviceType()) {
+                    case DeviceType.DEFAULT:
+                        device = DefaultInputDevice.FindPhysicalDeviceByName(deviceInfo.GetName());
+                        break;
+
+                    case DeviceType.ASIO:
+                        device = new AsioInputDevice(deviceInfo.GetName());
+                        break;
+                }
 
                 if (device == null) {
                     throw new ArgumentException(string.Format("aDevice \"{0}\" not found", deviceInfo.GetName()));
@@ -171,7 +182,7 @@ namespace Alvasoft.AudioServer.ChannelsManager
         /// </summary>
         /// <param name="aDeviceInfo">Описание устройства ввода.</param>
         /// <param name="aDevice">Устройство ввода.</param>
-        private void FillInChannels(InputDeviceInfo aDeviceInfo, InputDevice aDevice)
+        private void FillInChannels(InputDeviceInfo aDeviceInfo, IInputDevice aDevice)
         {
             var channelsCount = aDeviceInfo.GetChannelsCount();
             if (channelsCount > aDevice.GetChannelsCount()) {
@@ -181,7 +192,7 @@ namespace Alvasoft.AudioServer.ChannelsManager
             for (var channelIndex = 0; channelIndex < channelsCount; ++channelIndex) {
                 var channelInfo = aDeviceInfo.GetChannel(channelIndex);
 
-                var channel = new InChannel(channelInfo, aDevice);
+                var channel = new InputChannel(channelInfo, aDevice);
                 inChannels.Add(channel);
             }
         }
@@ -208,7 +219,16 @@ namespace Alvasoft.AudioServer.ChannelsManager
             var deviceCound = configuration.GetOutputDevicesCount();
             for (var deviceIndex = 0; deviceIndex < deviceCound; ++deviceIndex) {
                 var deviceInfo = configuration.GetOutputDevice(deviceIndex);
-                var device = OutputDevice.FindPhysicalDeviceByName(deviceInfo.GetName());
+                IOutputDevice device = null;
+                switch (deviceInfo.GetDeviceType()) {
+                    case DeviceType.DEFAULT:
+                        device = DefaultOutputDevice.FindPhysicalDeviceByName(deviceInfo.GetName());
+                        break;
+
+                    case DeviceType.ASIO:
+                        device = new AsioOutputDevice(deviceInfo.GetName());                        
+                        break;
+                }
 
                 if (device == null) {
                     throw new ArgumentException(string.Format("aDevice \"{0}\" not found", deviceInfo.GetName()));
@@ -226,7 +246,7 @@ namespace Alvasoft.AudioServer.ChannelsManager
         /// </summary>
         /// <param name="aDeviceInfo">OutputDeviceInfo.</param>
         /// <param name="aDevice">OutputDevice.</param>
-        private void FillOutChannels(OutputDeviceInfo aDeviceInfo, OutputDevice aDevice)
+        private void FillOutChannels(OutputDeviceInfo aDeviceInfo, IOutputDevice aDevice)
         {
             var channelsCount = aDeviceInfo.GetChannelsCount();
             if (channelsCount > aDevice.GetChannelsCount()) {
@@ -248,7 +268,7 @@ namespace Alvasoft.AudioServer.ChannelsManager
                     throw new ArgumentException("Channel group was not found for channel " + channelInfo.GetId());
                 }
 
-                var channel = new OutChannel(channelInfo, aDevice, channelGroup);
+                var channel = new OutputChannel(channelInfo, aDevice, channelGroup);
                 outChannels.Add(channel);
             }
         }       

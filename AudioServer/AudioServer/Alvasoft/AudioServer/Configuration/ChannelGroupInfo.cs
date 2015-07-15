@@ -23,6 +23,6 @@ namespace Alvasoft.AudioServer.Configuration {
       /// <param name="aIndex">Индекс.</param>
       /// <returns>Описание канала.</returns>
       /// <exception cref="IndexOutOfRangeException">Неверный индекс. Допустимый диаппазон значений [0 .. <see cref="GetChannelsCount()"/> - 1]></exception>
-      OutChannelInfo GetChannel( int aIndex );
+      OutputChannelInfo GetChannel( int aIndex );
    }
 }

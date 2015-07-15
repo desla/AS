@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <items>
 	<item>
-    <prefix>Prefixs/004Prefix.wav</prefix>
-		<filename>004</filename>
+		<filename>004.wav</filename>
 		<message>на ванне четыре</message>
 	</item>
 	<item>
-		<filename>005</filename>
+		<filename>005.wav</filename>
 		<message>на ванне пять</message>
 	</item>
 </items>

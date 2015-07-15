@@ -20,7 +20,7 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
         /// <param name="aVoice">Выбранный голос из системы.</param>
         /// <param name="aRate">Скорость воспроизведения.</param>
         /// <param name="aSamplePerSecond">Сэмплов в секунду.</param>
-        public VoiceSynthesizer(string aVoice, int aRate = 0, int aSamplePerSecond = 22050)
+        public VoiceSynthesizer(string aVoice, int aRate = 0, int aSamplePerSecond = 44100)
         {
             if (string.IsNullOrEmpty(aVoice)) {
                 throw new ArgumentNullException("aVoice");

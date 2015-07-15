@@ -16,7 +16,7 @@
         public int Rate { get; set; }
 
         /// <summary>
-        /// Семплов в секунду. По-умолчания должно быть 22050.
+        /// Семплов в секунду. По-умолчания должно быть 44100.
         /// </summary>
         public int SamplePerSecond { get; set; }
     }

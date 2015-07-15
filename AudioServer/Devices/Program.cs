@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using NAudio.Wave;
 
 namespace Devices
 {
@@ -45,19 +46,51 @@ namespace Devices
         public static extern uint waveOutGetDevCaps(UIntPtr hWaveOut, ref WAVEOUTCAPS pwoc, uint cbwoc);
 
         [DllImport("winmm.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        public static extern uint waveInGetDevCaps(UIntPtr hWaveIn, ref WAVEINCAPS pwic, uint cbwoc);
+        public static extern uint waveInGetDevCaps(UIntPtr hWaveIn, ref WAVEINCAPS pwic, uint cbwoc);        
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Средства Windows:");
+            ShowWindowsDevices();
+
+            Console.WriteLine("Средства Asio:");
+            ShowAsioDevices();
+
+            Console.WriteLine("\nДля выхода нажмите Enter.");
+            Console.ReadLine();
+        }
+
+        private static void ShowAsioDevices()
+        {            
+            Console.WriteLine("Поддержка Asio: " + AsioOut.isSupported());
+            if (AsioOut.isSupported()) {
+                var drivers = AsioOut.GetDriverNames();
+                Console.WriteLine("Обнаружено драйверов asio: " + drivers.Length);
+                for (var i = 0; i < drivers.Length; ++i) {
+                    try {
+                        var asioDriver = new AsioOut(drivers[i]);
+                        Console.WriteLine("{0} Выходных каналов: {1}, Входных каналов: {2}",
+                            asioDriver.DriverName,
+                            asioDriver.DriverInputChannelCount,
+                            asioDriver.DriverOutputChannelCount);
+                        asioDriver.Dispose();
+                    }
+                    catch {
+                        Console.WriteLine(drivers[i] + " не поддерживается.");
+                    }
+                }
+            }
+
+        }
+        private static void ShowWindowsDevices()
+        {
             var deviceCount = waveOutGetNumDevs();
-            Console.WriteLine("Найдено {0} устаройств вывода: ", deviceCount);
+            Console.WriteLine("Найдено {0} устройств вывода: ", deviceCount);
             for (var i = 0; i < deviceCount; ++i) {
                 var wOutCaps = new WAVEOUTCAPS();
                 waveOutGetDevCaps(new UIntPtr((uint)i), ref wOutCaps, (uint)Marshal.SizeOf(typeof(WAVEOUTCAPS)));
                 Console.WriteLine("Имя:\"{0}\" Каналов:{1}", wOutCaps.SzPname, wOutCaps.WChannels);
             }
-
-            Console.WriteLine();
 
             deviceCount = waveInGetNumDevs();
             Console.WriteLine("Найдено {0} устаройств ввода: ", deviceCount);
@@ -66,9 +99,7 @@ namespace Devices
                 waveInGetDevCaps(new UIntPtr((uint)i), ref wInCaps, (uint)Marshal.SizeOf(typeof(WAVEOUTCAPS)));
                 Console.WriteLine("Имя:\"{0}\" Каналов:{1}", wInCaps.SzPname, wInCaps.WChannels);
             }
-
-            Console.WriteLine("\nДля выхода нажмите Enter.");
-            Console.ReadLine();
         }
+
     }
 }

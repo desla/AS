@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
 using System.Windows.Forms;
 using Alvasoft.AudioServer.ChannelsManager;
@@ -32,12 +31,10 @@ namespace Alvasoft.AudioServer
         private ControlListener controlListener;
         private CommandListener commandListener;
 
-        private ChannelManager channelManager;
+        private IChannelManager channelManager;
         private SoundStorage soundStorage;
 
-        private TimeController timeController;
-
-        //private static AudioServer audioServer = new AudioServer();
+        private TimeController timeController;        
 
         /// <summary>
         /// Конструктор по умолчанию.
@@ -49,7 +46,10 @@ namespace Alvasoft.AudioServer
             configurationFileName = appPath + "Configurations\\AudioServerConfiguration.xml";
 
             // Создаем конфигурацию сервера.
-            configuration = new ServerConfiguration();            
+            configuration = new ServerConfiguration();
+
+            controlListener = new ControlListener();
+            commandListener = new CommandListener();
         }
 
         /// <summary>
@@ -85,11 +85,12 @@ namespace Alvasoft.AudioServer
                 for (int i = 0; i < configuration.GetOutputDevicesCount(); i++) {
                     OutputDeviceInfo outputDevice = configuration.GetOutputDevice(i);
                     Logger.Info("Устройство \"" + outputDevice.GetName() + "\"");
+                    Logger.Info("  Тип = " + outputDevice.GetDeviceType());
                     Logger.Info("  Идентификатор = " + outputDevice.GetId());
                 }
                 Logger.Info("Обнаружено " + configuration.GetOutChannelsCount() + " каналов.");
                 for (int j = 0; j < configuration.GetOutChannelsCount(); j++) {
-                    OutChannelInfo channel = configuration.GetOutChannel(j);
+                    OutputChannelInfo channel = configuration.GetOutChannel(j);
                     Logger.Info("Канал \"" + channel.GetName() + "\"");
                     Logger.Info("  Идентификатор = " + channel.GetId());
                     Logger.Info("  Идентификатор устройства = " + channel.GetDevice().GetId());
@@ -113,9 +114,6 @@ namespace Alvasoft.AudioServer
                 }
 
                 Logger.Info("Загрузка конфигурации сервера завершена.");
-
-                controlListener = new ControlListener();
-                commandListener = new CommandListener(configuration.BitReverce);
 
                 Logger.Info("Конфигурация менеджера каналов...");
                 channelManager = new ChannelManagerImpl(configuration);
@@ -337,15 +335,10 @@ namespace Alvasoft.AudioServer
         /// </summary>
         /// <param name="aChannelIds">Идентификаторы выходных каналов для объявления сообщения времени.</param>
         /// <param name="aPriority">Приоритет сообщения.</param>
-        /// <param name="aPrefixSound">Префикс для объявления времени.</param>
         /// <param name="aTimePhrase">Фраза для произношения.</param>
-        public void OnTimeAnnounce(int[] aChannelIds, int aPriority, byte[] aPrefixSound, string aTimePhrase)
+        public void OnTimeAnnounce(int[] aChannelIds, int aPriority, string aTimePhrase)
         {
-            var timeSound = soundStorage.ProvideSound(new[] {aTimePhrase});
-            var data = timeSound;
-            if (aPrefixSound != null) {
-                data = Enumerable.Concat(aPrefixSound, timeSound).ToArray();
-            }            
+            var data = soundStorage.ProvideSound(new[] {aTimePhrase});
             var message = new SoundMessage(data, (uint) aPriority);
             foreach (var channelId in aChannelIds) {
                 channelManager.ProcessMessage(message, channelId);
