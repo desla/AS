@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <configuration>
   <login>Pup</login>
-  <bitReverse>true</bitReverse>
   <timeControllerConfiguration>Configurations\TimeController.xml</timeControllerConfiguration>
   <mapSoundsConfiguration>Configurations\MapSounds.xml</mapSoundsConfiguration>
   <wavFilesFolder>Wav</wavFilesFolder>
   <voiceGenerator>
     <voice>RHVoice Elena (Russian)</voice>
-    <rate>-1</rate>
-    <samplePerSecond>22050</samplePerSecond>
+    <rate>0</rate>
+    <samplePerSecond>44100</samplePerSecond>
   </voiceGenerator>
   <outputDevices>
-		<device>
+		<device>      
 			<name>Динамики (Устройство с поддержк</name>
 			<channels>
 				<channel>
@@ -28,20 +27,68 @@
 				</channel>
 			</channels>
 		</device>
-	</outputDevices>
-  <inputDevices>
     <device>
-      <name>Микрофон (Устройство с поддержк</name>
+      <type>asio</type>
+      <name>Saffire</name>
+      <channels>
+        <channel>
+          <id>3</id>
+          <name>2-1</name>
+          <deviceChannel>0</deviceChannel>
+          <group>2</group>
+        </channel>
+        <channel>
+          <id>4</id>
+          <name>2-2</name>
+          <deviceChannel>1</deviceChannel>
+          <group>3</group>
+        </channel>
+        <channel>
+          <id>5</id>
+          <name>2-3</name>
+          <deviceChannel>2</deviceChannel>
+          <group>4</group>
+        </channel>
+        <channel>
+          <id>6</id>
+          <name>2-4</name>
+          <deviceChannel>3</deviceChannel>
+          <group>5</group>
+        </channel>
+        <channel>
+          <id>7</id>
+          <name>2-5</name>
+          <deviceChannel>4</deviceChannel>
+          <group>6</group>
+        </channel>
+      </channels>
+    </device>
+	</outputDevices>
+  <inputDevices>    
+    <device>
+      <type>Asio</type>
+      <name>Saffire</name>
       <channels>
         <channel>
           <id>1</id>
           <name>1-1</name>
-          <deviceChannel>0</deviceChannel>          
-        </channel>
+          <deviceChannel>1</deviceChannel>
+        </channel>        
+      </channels>
+    </device>
+    <device>
+      <type>default</type>
+      <name>Микрофон (Устройство с поддержк</name>
+      <channels>
         <channel>
           <id>2</id>
-          <name>1-2</name>
-          <deviceChannel>1</deviceChannel>          
+          <name>2-1</name>
+          <deviceChannel>0</deviceChannel>
+        </channel>
+        <channel>
+          <id>3</id>
+          <name>2-2</name>
+          <deviceChannel>1</deviceChannel>
         </channel>
       </channels>
     </device>

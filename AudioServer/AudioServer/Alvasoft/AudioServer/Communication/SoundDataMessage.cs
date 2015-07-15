@@ -12,12 +12,12 @@ namespace AudioServer.Alvasoft.AudioServer.Communication
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public class SoundCommand
     {
-        public Int32 channelCount;
+        public int channelCount;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 15)]
-        public Int32[] channels;
-        public Int32 priority;
-        public Int32 fileCount;
+        public int[] channels;
+        public int priority;
+        public int fileCount;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 5 * 20)]
-        public byte[] files;
+        public char[] files;
     }
 }

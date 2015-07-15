@@ -66,10 +66,10 @@ namespace Alvasoft.AudioServer.Communication
                 lineReader.AddBuffer(buffer);
                 // Извлекаем текст команды управления.                                
                 var line = string.Empty;
-                while ((line = lineReader.ReadLine()) != null) {
+                while ((line = lineReader.ReadLine()) != null) {                    
                     if (state == State.LOGIN_PROMPTED) {
-                        // Проверка пароля.
                         try {
+                            // Проверка пароля.
                             var password = line;
                             if (login.Equals(password)) {
                                 Logger.Debug("Login is OK.");

@@ -10,8 +10,7 @@
         /// </summary>
         /// <param name="aChannelIds">Идентивикаторы выходных каналов для объявления времени.</param>
         /// <param name="aPriority">Приоритет команды.</param>
-        /// <param name="aPrefixSound">Префикс для объявления времени.</param>
         /// <param name="aTimePhrase">Фраза для объявления.</param>
-        void OnTimeAnnounce(int[] aChannelIds, int aPriority, byte[] aPrefixSound, string aTimePhrase);
+        void OnTimeAnnounce(int[] aChannelIds, int aPriority, string aTimePhrase);
     }
 }

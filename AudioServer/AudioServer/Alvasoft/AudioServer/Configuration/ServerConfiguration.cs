@@ -20,6 +20,7 @@ namespace Alvasoft.AudioServer.Configuration
         private const string NODE_OUTPUT_DEVICES = "outputDevices";
         private const string NODE_INPUT_DEVICES = "inputDevices";
         private const string NODE_DEVICE = "device";
+        private const string NODE_TYPE = "type";
         private const string NODE_DEVICE_NAME = "name";
         private const string NODE_CHANNELS = "channels";
         private const string NODE_CHANNEL = "channel";
@@ -35,22 +36,20 @@ namespace Alvasoft.AudioServer.Configuration
         private const string NODE_SAMPLE_PER_SECOND = "samplePerSecond";
         private const string NODE_WAV_FILES_FOLDER = "wavFilesFolder";
         private const string NODE_LOGIN = "login";
-        private const string NODE_BIT_REVERCE = "bitReverse";
 
         public string MapSoundsFile { get; private set; }
         public string TimeControllerFile { get; private set; }
         public string WavFilesFolder { get; private set; }
         public string Login { get; private set; }
-        public bool BitReverce = true;
 
         public VoiceGeneratorInfo voiceConfiguration = new VoiceGeneratorInfo();
 
         private List<OutputDeviceInfoImpl> outputDevices = new List<OutputDeviceInfoImpl>();
-        private List<OutChannelInfoImpl> outputChannels = new List<OutChannelInfoImpl>();
+        private List<OutputChannelInfoImpl> outputChannels = new List<OutputChannelInfoImpl>();
         private List<ChannelGroupInfoImpl> channelGroups = new List<ChannelGroupInfoImpl>();
 
         private List<InputDeviceInfoImpl> inputDevices = new List<InputDeviceInfoImpl>();
-        private List<InChannelInfoImpl> inputChannels = new List<InChannelInfoImpl>();
+        private List<InputChannelInfoImpl> inputChannels = new List<InputChannelInfoImpl>();
 
         /// <summary>
         /// Загружает конфигурацию из файла.
@@ -77,9 +76,6 @@ namespace Alvasoft.AudioServer.Configuration
                 switch (items[itemIndex].Name) {
                     case NODE_LOGIN:
                         Login = items[itemIndex].InnerText;
-                        break;
-                    case NODE_BIT_REVERCE:
-                        BitReverce = items[itemIndex].InnerText.ToLower().Equals("true");
                         break;
                     case NODE_OUTPUT_DEVICES:
                         var outDevices = items[itemIndex].ChildNodes;
@@ -127,6 +123,10 @@ namespace Alvasoft.AudioServer.Configuration
                         deviceInfo.SetName(field.InnerText);
                         break;
 
+                    case NODE_TYPE:
+                        deviceInfo.SetDeviceType(field.InnerText);
+                        break;
+
                     case NODE_CHANNELS:
                         for (var channelIndex = 0; channelIndex < field.ChildNodes.Count; ++channelIndex) {
                             LoadInChannelFromXml(field.ChildNodes[channelIndex], deviceInfo.GetId());
@@ -148,7 +148,7 @@ namespace Alvasoft.AudioServer.Configuration
         /// <param name="aDeviceId">Идентификатор устройства ввода.</param>
         private void LoadInChannelFromXml(XmlNode aChannel, long aDeviceId)
         {
-            var channelInfo = new InChannelInfoImpl();
+            var channelInfo = new InputChannelInfoImpl();
             channelInfo.SetDeviceId(aDeviceId);
             for (var fieldIndex = 0; fieldIndex < aChannel.ChildNodes.Count; ++fieldIndex) {
                 var field = aChannel.ChildNodes[fieldIndex];
@@ -206,6 +206,10 @@ namespace Alvasoft.AudioServer.Configuration
             for (var fieldIndex = 0; fieldIndex < device.ChildNodes.Count; ++fieldIndex) {
                 var field = device.ChildNodes[fieldIndex];
                 switch (field.Name) {
+                    case NODE_TYPE:                        
+                        deviceInfo.SetDeviceType(field.InnerText);
+                        break;
+
                     case NODE_DEVICE_NAME:
                         deviceInfo.SetName(field.InnerText);
                         break;
@@ -231,7 +235,7 @@ namespace Alvasoft.AudioServer.Configuration
         /// <param name="deviceId">Идентификатор устройства вывода.</param>
         private void LoadOutChannelFromXml(XmlNode channel, long deviceId)
         {
-            var channelInfo = new OutChannelInfoImpl();
+            var channelInfo = new OutputChannelInfoImpl();
             channelInfo.SetDeviceId(deviceId);
             for (var fieldIndex = 0; fieldIndex < channel.ChildNodes.Count; ++ fieldIndex) {
                 var field = channel.ChildNodes[fieldIndex];
@@ -285,7 +289,7 @@ namespace Alvasoft.AudioServer.Configuration
         {
             for (int i = 0; i < outputDevices.Count(); i++) {
                 OutputDeviceInfo outputDevice = outputDevices.ElementAt(i);
-                if (outputDevice.GetName().CompareTo(aDeviceName) == 0) {
+                if (outputDevice.GetName().Equals(aDeviceName)) {
                     return outputDevice;
                 }
             }
@@ -317,10 +321,10 @@ namespace Alvasoft.AudioServer.Configuration
         /// </summary>
         /// <param name="aChannelId">Идентификатор канала.</param>
         /// <returns>Описание канала. <code>null</code>, если не найден.</returns>
-        public OutChannelInfo FindChannelById(long aChannelId)
+        public OutputChannelInfo FindChannelById(long aChannelId)
         {
             for (int i = 0; i < outputChannels.Count(); i++) {
-                OutChannelInfo channel = outputChannels.ElementAt(i);
+                OutputChannelInfo channel = outputChannels.ElementAt(i);
                 if (channel.GetId() == aChannelId) {
                     return channel;
                 }
@@ -333,10 +337,10 @@ namespace Alvasoft.AudioServer.Configuration
         /// </summary>
         /// <param name="aChannelName"></param>
         /// <returns>Описание устройств ввода. <code>null</code>, если не найден.</returns>
-        public OutChannelInfo FindChannelByName(string aChannelName)
+        public OutputChannelInfo FindChannelByName(string aChannelName)
         {
             for (int i = 0; i < outputChannels.Count(); i++) {
-                OutChannelInfo channel = outputChannels.ElementAt(i);
+                OutputChannelInfo channel = outputChannels.ElementAt(i);
                 if (channel.GetName().CompareTo(aChannelName) == 0) {
                     return channel;
                 }
@@ -359,7 +363,7 @@ namespace Alvasoft.AudioServer.Configuration
         /// <param name="aIndex">Индекс.</param>
         /// <returns>Описание канала.</returns>
         /// <exception cref="IndexOutOfRangeException">Неверный индекс. Допустимый диаппазон значений [0 .. <see cref="GetOutChannelsCount()"/> - 1]></exception>
-        public OutChannelInfo GetOutChannel(int aIndex)
+        public OutputChannelInfo GetOutChannel(int aIndex)
         {
             return outputChannels.ElementAt(aIndex);
         }
@@ -489,7 +493,7 @@ namespace Alvasoft.AudioServer.Configuration
         /// </summary>
         /// <param name="i">Индекс.</param>
         /// <returns>Входной канал.</returns>
-        public InChannelInfo GetInChannel(int i)
+        public InputChannelInfo GetInChannel(int i)
         {
             return inputChannels[i];
         }

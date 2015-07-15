@@ -44,7 +44,7 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
                 throw new ArgumentNullException("aSource");
             }
 
-            return files.Contains(aSource + ".wav");            
+            return files.Contains(aSource);            
         }
 
         /// <summary>
@@ -55,9 +55,8 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
         public byte[] ProvideSoundData(string aSource)
         {
             var soundsCound = files.Count;
-            var soundKey = aSource + ".wav";
             for (var i = 0; i < soundsCound; ++i) {
-                if (soundKey.Equals(files.ElementAt(i))) {
+                if (aSource.Equals(files.ElementAt(i))) {
                     var bufferLength = soundsData[i].Length;
                     var buffer = new byte[bufferLength];
                     soundsData[i].CopyTo(buffer, 0);

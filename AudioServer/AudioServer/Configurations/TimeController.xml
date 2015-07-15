@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configurations>
-  <prefix>Prefixs\TimePrefix.wav</prefix>
   <configuration>
     <everyMinutes>2</everyMinutes>
     <channels>
@@ -12,6 +11,16 @@
     <channels>
       <channelId>1</channelId>
       <channelId>2</channelId>
+    </channels>
+  </configuration>
+  <configuration>
+    <everyMinutes>1</everyMinutes>
+    <channels>
+      <channelId>3</channelId>
+      <channelId>4</channelId>
+      <channelId>5</channelId>
+      <channelId>6</channelId>
+      <channelId>7</channelId>
     </channels>
   </configuration>
 </configurations>
