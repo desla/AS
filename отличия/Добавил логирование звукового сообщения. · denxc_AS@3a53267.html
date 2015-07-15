@@ -1,0 +1,2491 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c -->
+<html lang="en" class=" is-copy-enabled"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>Добавил логирование звукового сообщения. · denxc/AS@3a53267</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      
+      <meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="https://avatars1.githubusercontent.com/u/4986746?v=3&amp;s=200" property="og:image"><meta content="Добавил логирование звукового сообщения. · denxc/AS@3a53267" property="og:title"><meta content="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c" property="og:url"><meta content="1433112044" property="og:updated_time">
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTMzNDQ3MzE6ZGE0ZmVlMjFmYzBjMGNlOTI3MjI1NGI0NTg4ODdmYzM6ODY1ZTM2ZWY5YjBjODQ3ZWNkMDY2ZGFmNzY2M2RmNWM4MGM5ZDZhODg5YjQzY2MwNWViMWZmNzllYzQ2YjA4OQ==--b5a4f7c8fe07c924f5608ad3c7142765c6096bfb">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_commits" data-pjax-transient="">
+
+        <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host"><meta content="collector-cdn.github.com" name="octolytics-script-host"><meta content="github" name="octolytics-app-id"><meta content="C3DAB62C:61C0:A85CABB:55A5FF6F" name="octolytics-dimension-request_id"><meta content="13344731" name="octolytics-actor-id"><meta content="desla" name="octolytics-actor-login"><meta content="c40f311699b55bd5598886d537a89a687b8181e52f799cc7466478fffded2e7b" name="octolytics-actor-hash">
+    
+    <meta content="Rails, view, commit#show" data-pjax-transient="true" name="analytics-event">
+    <meta class="js-ga-set" name="dimension1" content="Logged In">
+    <meta name="is-dotcom" content="true">
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="desla">
+
+      <link rel="icon" sizes="any" mask="" href="https://assets-cdn.github.com/pinned-octocat.svg">
+      <meta name="theme-color" content="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="m29bwh9ugCFxHgSM38ohTY2v8kTXdA+qy0JydFV/HGimnOA7CkjzIbIlqDWnQxJwcAi1zD9XCZDxZkSv3KFrSQ==" name="csrf-token">
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-8824a5ef57ac4ae0b5ca429778b9660b1c66d09deea2ff11681de18d86a4bbb1.css" media="all" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-f0d033a37796c27f6b5b24aa8dc21af9c206a51ed2fe782d660dc20267c17d2b.css" media="all" rel="stylesheet">
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="3f58d2288e653bc3998db56bf3ad89c7">
+
+        <link data-pjax-transient="true" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c.diff" rel="alternate" type="text/plain+diff">
+  <link data-pjax-transient="true" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c.patch" rel="alternate" type="text/plain+patch">
+
+  <meta name="diff-view" content="unified" data-pjax-transient="">
+
+  <meta name="description" content="Contribute to AS development by creating an account on GitHub.">
+  <meta name="go-import" content="github.com/denxc/AS git https://github.com/denxc/AS.git">
+
+  <meta content="4986746" name="octolytics-dimension-user_id"><meta content="denxc" name="octolytics-dimension-user_login"><meta content="29006287" name="octolytics-dimension-repository_id"><meta content="denxc/AS" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="29006287" name="octolytics-dimension-repository_network_root_id"><meta content="denxc/AS" name="octolytics-dimension-repository_network_root_nwo">
+  <link href="https://github.com/denxc/AS/commits/3a53267f9903d9907450438820bc67feffbe201c.atom" rel="alternate" title="Recent Commits to AS:3a53267f9903d9907450438820bc67feffbe201c" type="application/atom+xml">
+
+  <script type="text/javascript" async="" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/api.js"></script><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style></head>
+
+
+  <body class="logged_in  env-production windows vis-public">
+    <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+
+
+
+        <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+      <div class="site-search repo-scope js-site-search" role="search">
+          <form accept-charset="UTF-8" action="https://github.com/denxc/AS/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/denxc/AS/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text" class="js-site-search-focus js-site-search-field is-clearable chromeless-input" data-hotkey="s" name="q" placeholder="Search" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off">
+  </label>
+</form>
+      </div>
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="https://github.com/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="https://github.com/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+      <span class="js-socket-channel js-updatable-content" data-channel="notification-changed:desla" data-url="/notifications/header">
+      <a href="https://github.com/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+          <span class="mail-status all-read"></span>
+          <span class="octicon octicon-inbox"></span>
+</a>  </span>
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="https://github.com/new" aria-label="Create new..." data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus left"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="https://github.com/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+
+  <a class="dropdown-item" href="https://github.com/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="denxc/AS">This repository</span>
+  </div>
+    <a class="dropdown-item" href="https://github.com/denxc/AS/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-s js-menu-target" href="https://github.com/desla" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@desla" class="avatar" height="20" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/13344731" width="20">
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu dropdown-menu-sw">
+        <div class="dropdown-header header-nav-current-user css-truncate">
+          Signed in as <strong class="css-truncate-target">desla</strong>
+        </div>
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="https://github.com/desla" data-ga-click="Header, go to profile, text:your profile">
+          Your profile
+        </a>
+        <a class="dropdown-item" href="https://github.com/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="https://github.com/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+        <a class="dropdown-item" href="https://help.github.com/" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="https://github.com/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+          Settings
+        </a>
+
+        <form accept-charset="UTF-8" action="https://github.com/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="jEDaZrmB7um41g07/OczeK/q0d1LuV5vJ/6/sSF8BIWue4pRuhshOJEPQFjLKiXLQ4BhVCGQB3KnrvXvAISeTA=="></div>
+          <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+        
+
+        
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope="" itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+
+        
+<ul class="pagehead-actions">
+
+  <li>
+      <form accept-charset="UTF-8" action="https://github.com/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="QkYHF34uCLQEEwvdOQ5d1Klt7+it1BiYFxWzoGJ9WxH2AaRsEN12Sis8BxIK0VBO3QVRry9ToKycx+I4HXQ07A=="></div>    <input id="repository_id" name="repository_id" type="hidden" value="29006287">
+
+      <div class="select-menu js-menu-container js-select-menu">
+        <a href="https://github.com/denxc/AS/subscription" class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true" data-ga-click="Repository, click Watch settings, action:commit#show">
+          <span class="js-select-button">
+            <span class="octicon octicon-eye"></span>
+            Watch
+          </span>
+        </a>
+        <a class="social-count js-social-count" href="https://github.com/denxc/AS/watchers">
+          1
+        </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header">
+              <span class="select-menu-title">Notifications</span>
+              <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+            </div>
+
+            <div class="select-menu-list js-navigation-container" role="menu">
+
+              <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input checked="checked" id="do_included" name="do" type="radio" value="included">
+                  <span class="select-menu-item-heading">Not watching</span>
+                  <span class="description">Be notified when participating or @mentioned.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-eye"></span>
+                    Watch
+                  </span>
+                </div>
+              </div>
+
+              <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input id="do_subscribed" name="do" type="radio" value="subscribed">
+                  <span class="select-menu-item-heading">Watching</span>
+                  <span class="description">Be notified of all conversations.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-eye"></span>
+                    Unwatch
+                  </span>
+                </div>
+              </div>
+
+              <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input id="do_ignore" name="do" type="radio" value="ignore">
+                  <span class="select-menu-item-heading">Ignoring</span>
+                  <span class="description">Never be notified.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-mute"></span>
+                    Stop ignoring
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <form accept-charset="UTF-8" action="https://github.com/denxc/AS/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="giHQXKfQnj98AKUmc1fVHQaGUPsrJdnuFm6In/mo/hQ03E1kxGPLuwNfaGD1Jeml70dWOFZ01TTmJjUhu/URHQ=="></div>
+      <button class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar denxc/AS" data-ga-click="Repository, click unstar button, action:commit#show; text:Unstar">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/denxc/AS/stargazers">
+          0
+        </a>
+</form>
+    <form accept-charset="UTF-8" action="https://github.com/denxc/AS/star" class="js-toggler-form unstarred js-star-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="k4dEfNPd8+9Mp7qQEzoYPkodiILiP1QvOmythbC+w91RypNpu2VX8YxTOELvpNC+IQb5C2WyXtbSwZoV7DNsWA=="></div>
+      <button class="btn btn-sm btn-with-count js-toggler-target" aria-label="Star this repository" title="Star denxc/AS" data-ga-click="Repository, click star button, action:commit#show; text:Star">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/denxc/AS/stargazers">
+          0
+        </a>
+</form>  </div>
+
+  </li>
+
+        <li>
+          <form accept-charset="UTF-8" action="https://github.com/denxc/AS/fork" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="8kGXOiwFIjwiWjcmzB6q8O+cSr2MRJW7blDbQFWYWQNRX7u5jjh8DZDDbxYqJoVRCiYW7EqMKhC1tAiewesXwA=="></div>
+            <button type="submit" class="btn btn-sm btn-with-count" data-ga-click="Repository, show fork modal, action:commit#show; text:Fork" title="Fork your own copy of denxc/AS to your account" aria-label="Fork your own copy of denxc/AS to your account">
+              <span class="octicon octicon-repo-forked"></span>
+              Fork
+            </button>
+            <a href="https://github.com/denxc/AS/network" class="social-count">0</a>
+</form>        </li>
+
+</ul>
+
+        <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="https://github.com/denxc" class="url fn" itemprop="url" rel="author"><span itemprop="title">denxc</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="https://github.com/denxc/AS" data-pjax="#js-repo-pjax-container">AS</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16">
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline">
+        <div class="repository-sidebar clearfix">
+            
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders" role="navigation" data-pjax="#js-repo-pjax-container" data-issue-count-url="/denxc/AS/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="https://github.com/denxc/AS" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /denxc/AS">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16">
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="https://github.com/denxc/AS/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /denxc/AS/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="js-issue-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull requests">
+      <a href="https://github.com/denxc/AS/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /denxc/AS/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16">
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Wiki">
+        <a href="https://github.com/denxc/AS/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g w" data-selected-links="repo_wiki /denxc/AS/wiki">
+          <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+          <img alt="" class="mini-loader" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="https://github.com/denxc/AS/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /denxc/AS/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16">
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="https://github.com/denxc/AS/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /denxc/AS/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16">
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+              <div class="only-with-full-nav">
+                  
+<div class="js-clone-url clone-url open" data-protocol-type="http">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/denxc/AS.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url " data-protocol-type="ssh">
+  <h3><span class="text-emphasized">SSH</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target" value="git@github.com:denxc/AS.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url " data-protocol-type="subversion">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/denxc/AS" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<div class="clone-options">You can clone with
+  <form accept-charset="UTF-8" action="https://github.com/users/set_protocol?protocol_selector=http&protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="kaU6H9PL9oyib2Cm+NdSQUKfbdmVc2F2uq/z1vFcU6lcJ7tH1UEJNTC92pZq0t1PlK4chRjWBks3GiUO7SfF1w=="></div><button class="btn-link js-clone-selector" data-protocol="http" type="submit">HTTPS</button></form>, <form accept-charset="UTF-8" action="https://github.com/users/set_protocol?protocol_selector=ssh&protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="22cIoH689LFLBMQhdtcReiifRuxouvpaDLGQ9mXmncF/XmVmUHkOXiAYXkjbrzdQ3NUjUK2qvwTdehoVfX17OA=="></div><button class="btn-link js-clone-selector" data-protocol="ssh" type="submit">SSH</button></form>, or <form accept-charset="UTF-8" action="https://github.com/users/set_protocol?protocol_selector=subversion&protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="i2p6yQuon5S3X8EplhLrwTXsCZ41JmcqmjkYS0FP0mMLVZlZhDVASe5Mts6fX7FMJwFIsoKWm7IN4kFRf/ZaaQ=="></div><button class="btn-link js-clone-selector" data-protocol="subversion" type="submit">Subversion</button></form>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</div>
+
+
+  <a href="https://windows.github.com/" class="btn btn-sm sidebar-button" title="Save denxc/AS to your computer and use it in GitHub Desktop." aria-label="Save denxc/AS to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                <a href="https://github.com/denxc/AS/archive/3a53267f9903d9907450438820bc67feffbe201c.zip" class="btn btn-sm sidebar-button" aria-label="Download the contents of denxc/AS as a zip file" title="Download the contents of denxc/AS as a zip file" rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container="">
+
+          
+<a href="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/Добавил логирование звукового сообщения. · denxc_AS@3a53267.html" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+
+
+
+<div class="commit full-commit ">
+  <a href="https://github.com/denxc/AS/tree/3a53267f9903d9907450438820bc67feffbe201c" class="btn btn-outline right" title="Browse the repository at this point in the history" rel="nofollow">Browse files</a>
+
+    <p class="commit-title">
+      Добавил логирование звукового сообщения.
+    </p>
+
+
+  <div class="commit-branches">
+    
+
+    <span class="octicon octicon-git-branch"></span>
+    <ul class="branches-list">
+        <li class="branch"><a href="https://github.com/denxc/AS">master</a></li>
+    </ul>
+  </div>
+
+  <div class="commit-meta clearfix">
+    <span class="sha-block">commit <span class="sha js-selectable-text">3a53267f9903d9907450438820bc67feffbe201c</span></span>
+
+    <span class="sha-block" data-pjax="">
+      1 parent
+        
+        <a href="https://github.com/denxc/AS/commit/0a5bc4b6baa3e6f25934c461f12d4df06b05c20d" class="sha" data-hotkey="p">0a5bc4b</a>
+    </span>
+
+    <div class="authorship">
+      <img alt="@denxc" class="avatar" height="24" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/4986746" width="24">
+      <span class="author-name"><a href="https://github.com/denxc" rel="author">denxc</a></span>
+      
+      authored <time datetime="2015-05-31T22:40:44Z" is="relative-time" title="1 июня 2015 г., 1:40 GMT+3">on 1 Jun</time>
+
+    </div>
+  </div>
+</div>
+
+
+
+      <table style="display:none">
+    <tbody id="js-inline-comments-single-container-template">
+      
+<tr class="inline-comments js-inline-comments-container ">
+  
+
+<td class="line-comments  js-line-comments js-quote-selection-container  " colspan="3">
+  <div class="comment-holder js-comments-holder">
+  </div>
+
+  <div class="inline-comment-form-container js-inline-comment-form-container">
+  <div class="inline-comment-form-actions">
+    <button class="btn js-toggle-inline-comment-form">Add a line note</button>
+
+  </div>
+
+  <div class="inline-comment-form">
+      <form accept-charset="UTF-8" action="https://github.com/denxc/AS/commit_comment/create" class="js-inline-comment-form" data-remote="" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="/NQTznxyqKMKwGg8/Ex7L229qs+8UEbVtBg+RIbZ+7t/tLjWnXLX6MZHZ1IFb3wIZNgPAvmMU7MQAGL34vkH8Q=="></div>
+        <input type="hidden" name="context" value="diff">
+
+          <input type="hidden" name="commit_id" value="3a53267f9903d9907450438820bc67feffbe201c">
+          <input type="hidden" name="path">
+          <input type="hidden" name="position">
+          <input type="hidden" name="line">
+
+        
+<div class="js-previewable-comment-form js-suggester-container previewable-comment-form write-selected" data-preview-url="/preview?repository=29006287">
+  <div class="comment-form-head tabnav">
+    <div class="right">
+      <a class="tabnav-extra" href="https://guides.github.com/features/mastering-markdown/" target="_blank">
+        <span class="octicon octicon-markdown"></span>
+        Markdown supported
+      </a>
+      
+<a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#fullscreen" class="enable-fullscreen js-enable-fullscreen tooltipped-n
+  tabnav-extra">
+  <span class="octicon octicon-screen-full"></span>
+  Edit in fullscreen
+</a>
+
+    </div>
+    <nav class="tabnav-tabs">
+      <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#" class="tabnav-tab write-tab js-write-tab selected">Write</a>
+      <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#" class="tabnav-tab preview-tab js-preview-tab">Preview</a>
+    </nav>
+  </div>
+
+  <div class="comment-form-error js-comment-form-error" style="display:none">    There was an error creating your Commit.
+</div>
+  <div class="write-content js-write-bucket js-uploadable-container js-upload-markdown-image upload-enabled is-default" data-upload-policy-url="/upload/policies/assets" data-upload-repository-id="29006287">
+
+    <textarea name="comment[body]" tabindex="1" id="comment_body_1" placeholder="Leave a comment" aria-label="Comment body" class="input-contrast comment-form-textarea js-comment-field js-task-list-field js-quick-submit js-quote-selection-target js-session-resumable js-suggester-field" required=""></textarea>
+
+        <p class="drag-and-drop">
+    <span class="default">
+        Attach images by dragging &amp; dropping,
+        <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">selecting them</a>, or pasting
+        from the clipboard.
+    </span>
+    <span class="loading">
+      <img alt="" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16"> Uploading your files…
+    </span>
+    <span class="error bad-file">
+      Unfortunately, we don't support that file type.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">Try again</a> with a
+          PNG, GIF, JPG.
+      </span>
+    </span>
+    <span class="error too-big">
+      Yowza, that's a big file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">Try again</a> with an image file smaller than 10MB.
+      </span>
+    </span>
+    <span class="error empty">
+      This file is empty.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">Try again</a> with a file that's not empty.
+      </span>
+    </span>
+    <span class="error bad-browser">
+      This browser doesn't support file attachments.
+      <span class="drag-and-drop-error-info">
+        We recommend updating to the latest
+        <a href="http://windows.microsoft.com/ie">Internet Explorer</a>,
+        <a href="https://chrome.google.com/">Google Chrome</a>, or
+        <a href="https://www.mozilla.org/firefox">Firefox</a>.
+      </span>
+    </span>
+    <span class="error failed-request">
+      Something went really wrong, and we can't process that file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">Try again.</a>
+      </span>
+    </span>
+  </p>
+
+
+    <div class="suggester-container">
+      <div class="suggester js-suggester js-navigation-container" data-url="/denxc/AS/suggestions/commit/3a53267f9903d9907450438820bc67feffbe201c">
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-content">
+    <div class="comment">
+  <div class="comment-content">
+    <div class="comment-body markdown-body js-preview-body">
+      <p>Nothing to preview</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+  <div class="comment-form-error comment-form-bottom js-comment-update-error"></div>
+</div>
+
+
+        <div class="form-actions">
+          <div class="left">
+            <span class="ajax-indicator">
+              <img alt="" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32-EAF2F5.gif" width="16">
+            </span>
+          </div>
+
+          <button class="btn btn-primary" type="submit" tabindex="1" data-disable-invalid="" data-disable-with="" disabled="">
+            Comment
+          </button>
+
+          <button class="btn js-hide-inline-comment-form" type="button">Cancel</button>
+        </div>
+</form>  </div>
+</div>
+
+</td>
+
+</tr>
+
+    </tbody>
+  </table>
+
+
+    <a name="diff-stat"></a>
+    <div id="toc" class="details-collapse table-of-contents js-details-container">
+  <div class="btn-group right" data-ga-load="Diff, view, Viewed Unified Diff">
+  <a class="btn btn-sm selected" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c?diff=unified">
+    Unified
+  </a>
+  <a class="btn btn-sm" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c?diff=split">
+    Split
+  </a>
+</div>
+
+
+  <div class="toc-diff-stats">
+    <span class="octicon octicon-diff"></span>
+    Showing
+    <button type="button" class="btn-link js-details-target">
+      1 changed file
+    </button>
+    with
+    <strong>35 additions</strong>
+    and <strong>12 deletions</strong>.
+  </div>
+
+  <ol class="content collapse js-transitionable">
+    <li>
+      <span class="diffstat right">
+          <span class="text-diff-added">
+            +35
+          </span>
+          <span class="text-diff-deleted">
+            −12
+          </span>
+          <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#diff-3aad9623c8ac7992f8779bfeb33bf2a5" class="tooltipped tooltipped-s" aria-label="47 lines changed">
+            <span class="diffstat-bar">
+              <span class="text-diff-added"></span><span class="text-diff-added"></span><span class="text-diff-added"></span><span class="text-diff-deleted"></span>
+            </span>
+          </a>
+      </span>
+      <span class="octicon octicon-diff-modified" title="modified"></span>
+      <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#diff-3aad9623c8ac7992f8779bfeb33bf2a5">AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs</a>
+    </li>
+  </ol>
+</div>
+
+  <div id="files" class="diff-view commentable">
+    
+      <a name="diff-3aad9623c8ac7992f8779bfeb33bf2a5"></a>
+      <div id="diff-0" class="file js-details-container
+                   
+                   
+                   
+                   
+                   show-inline-notes
+                 ">
+        <div class="file-header" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs">
+          <div class="file-actions">
+              <span class="show-file-notes">
+                <label>
+                  <input type="checkbox" checked="checked" class="js-toggle-file-notes">
+                  Show notes
+                </label>
+              </span>
+
+                <a href="https://github.com/denxc/AS/blob/3a53267f9903d9907450438820bc67feffbe201c/AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" class="btn btn-sm tooltipped tooltipped-n" rel="nofollow" aria-label="View the whole file at version 3a53267 ">View</a>
+
+
+          </div>
+          <div class="file-info">
+              <span class="diffstat tooltipped tooltipped-e" aria-label="35 additions &amp; 12 deletions">47 <span class="diffstat-bar"><span class="text-diff-added"></span><span class="text-diff-added"></span><span class="text-diff-added"></span><span class="text-diff-deleted"></span></span></span>
+
+            <span class="js-selectable-text" title="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs">
+              AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs
+            </span>
+            
+          </div>
+        </div>
+
+            <div class="data highlight blob-wrapper">
+              <table class="diff-table tab-size  " data-tab-size="8">
+                
+      <tbody><tr class="js-expandable-line" data-position="0">
+    <td class="blob-num blob-num-expandable" colspan="2">
+      <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#diff-3aad9623c8ac7992f8779bfeb33bf2a5" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/denxc/AS/blob_excerpt/1030fd1ea6027d99fea2e03f2c3b07b0f0257b96?diff=unified&amp;left_hunk_size=26&amp;mode=100644&amp;next_line_num_left=47&amp;next_line_num_right=47&amp;path=AudioServer%2FAudioServer%2FAlvasoft%2FAudioServer%2FCommunication%2FCommandSession.cs&amp;prev_line_num_left=&amp;prev_line_num_right=&amp;right_hunk_size=49" data-left-range="1-46" data-right-range="1-46">
+        <span class="octicon octicon-unfold"></span>
+      </a>
+    </td>
+    <td class="blob-code blob-code-inner blob-code-hunk">@@ -47,26 +47,49 @@ public void OnReceivedFrom(ClientConnection aClientConnection, byte[] aBuffer, i</td>
+  </tr>
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L47" data-line-number="47" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R47" data-line-number="47" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="1" data-line="47" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">                     message.channels[i] = ReverceBits(message.channels[i]);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L48" data-line-number="48" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R48" data-line-number="48" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="2" data-line="48" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">                 }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L49" data-line-number="49" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R49" data-line-number="49" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="3" data-line="49" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner"> </span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L50" data-line-number="50" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="4" data-line="50" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                <span class="pl-k">var</span> channels = <span class="pl-k">new</span> <span class="pl-k">int</span>[message.channelCount];</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L51" data-line-number="51" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="5" data-line="51" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                <span class="pl-k">for</span> (<span class="pl-k">var</span> i = <span class="pl-c1">0</span>; i &lt; message.channelCount; ++i) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L52" data-line-number="52" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="6" data-line="52" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                    channels[i] = message.channels[i];</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L53" data-line-number="53" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="7" data-line="53" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R50" data-line-number="50" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="8" data-line="50" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                LogMessage(message);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L54" data-line-number="54" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R51" data-line-number="51" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="9" data-line="51" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner"> </span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L55" data-line-number="55" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="10" data-line="55" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                <span class="pl-k x x-first">var</span><span class="x"> fileNames = </span><span class="pl-k x">new</span><span class="x"> </span><span class="pl-k x">string</span><span class="x x-last">[</span>message.fileCount<span class="x x-first x-last">];</span></span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L56" data-line-number="56" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="11" data-line="56" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                <span class="pl-k">var</span> <span class="x x-first x-last">messageFiles</span> = <span class="x x-first x-last">Encoding.ASCII.GetString(</span>message.<span class="x x-first x-last">files)</span>;</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L57" data-line-number="57" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="12" data-line="57" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                <span class="pl-k">for</span> (<span class="pl-k">var</span> i = <span class="pl-c1">0</span>; i &lt; message.<span class="x x-first x-last">fileCount</span>; ++i) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L58" data-line-number="58" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="13" data-line="58" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                    <span class="x x-first x-last">fileNames</span>[i] = <span class="x x-first">messageFiles.Substring(i*</span><span class="pl-c1 x">20</span><span class="x">, </span><span class="pl-c1 x">20</span><span class="x">).Trim(</span><span class="pl-s"><span class="pl-pds x">'</span><span class="pl-cce x">\0</span><span class="pl-pds x">'</span></span><span class="x x-last">)</span>;</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L59" data-line-number="59" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="14" data-line="59" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R52" data-line-number="52" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="15" data-line="52" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                <span class="pl-k x x-first">if</span><span class="x"> (message.channelCount &gt; </span><span class="pl-c1 x">0</span><span class="x x-last"> &amp;&amp; </span>message.fileCount<span class="x x-first"> &gt; </span><span class="pl-c1 x">0</span><span class="x x-last">) {</span></span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R53" data-line-number="53" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="16" data-line="53" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                <span class="x x-first x-last">    </span><span class="pl-k">var</span> <span class="x x-first x-last">channels</span> = <span class="pl-k x x-first">new</span><span class="x"> </span><span class="pl-k x">int</span><span class="x x-last">[</span>message.<span class="x x-first x-last">channelCount]</span>;</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R54" data-line-number="54" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="17" data-line="54" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                <span class="x x-first x-last">    </span><span class="pl-k">for</span> (<span class="pl-k">var</span> i = <span class="pl-c1">0</span>; i &lt; message.<span class="x x-first x-last">channelCount</span>; ++i) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R55" data-line-number="55" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="18" data-line="55" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                    <span class="x x-first x-last">    channels</span>[i] = <span class="x x-first x-last">message.channels[i]</span>;</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R56" data-line-number="56" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="19" data-line="56" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                <span class="x x-first x-last">    </span>}</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L60" data-line-number="60" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R57" data-line-number="57" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="20" data-line="57" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner"> </span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L61" data-line-number="61" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="21" data-line="61" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                <span class="pl-k">if</span> (callback != <span class="pl-c1">null</span>) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L62" data-line-number="62" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="22" data-line="62" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                    callback.OnPlaySound(<span class="pl-c1">this</span>, channels, message.priority, fileNames);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L63" data-line-number="63" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="23" data-line="63" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">-                }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R58" data-line-number="58" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="24" data-line="58" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                    <span class="pl-k">var</span> fileNames = <span class="pl-k">new</span> <span class="pl-k">string</span>[message.fileCount];</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R59" data-line-number="59" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="25" data-line="59" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                    <span class="pl-k">var</span> messageFiles = Encoding.ASCII.GetString(message.files);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R60" data-line-number="60" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="26" data-line="60" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                    <span class="pl-k">for</span> (<span class="pl-k">var</span> i = <span class="pl-c1">0</span>; i &lt; message.fileCount; ++i) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R61" data-line-number="61" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="27" data-line="61" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                        fileNames[i] = messageFiles.Substring(i * <span class="pl-c1">20</span>, <span class="pl-c1">20</span>).Trim(<span class="pl-s"><span class="pl-pds">'</span><span class="pl-cce">\0</span><span class="pl-pds">'</span></span>);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R62" data-line-number="62" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="28" data-line="62" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                    }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R63" data-line-number="63" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="29" data-line="63" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R64" data-line-number="64" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="30" data-line="64" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                    <span class="pl-k">if</span> (callback != <span class="pl-c1">null</span>) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R65" data-line-number="65" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="31" data-line="65" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                        callback.OnPlaySound(<span class="pl-c1">this</span>, channels, message.priority, fileNames);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R66" data-line-number="66" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="32" data-line="66" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                    }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R67" data-line-number="67" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="33" data-line="67" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                }                </span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L64" data-line-number="64" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R68" data-line-number="68" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="34" data-line="68" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">             }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L65" data-line-number="65" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R69" data-line-number="69" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="35" data-line="69" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">             <span class="pl-k">catch</span> (Exception ex) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L66" data-line-number="66" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R70" data-line-number="70" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="36" data-line="70" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">                 Logger.Error(<span class="pl-s"><span class="pl-pds">"</span>Ошибка при обработке сообщения: <span class="pl-pds">"</span></span> + ex.Message);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L67" data-line-number="67" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R71" data-line-number="71" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="37" data-line="71" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">             }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L68" data-line-number="68" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R72" data-line-number="72" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="38" data-line="72" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">         }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L69" data-line-number="69" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R73" data-line-number="73" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="39" data-line="73" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner"> </span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R74" data-line-number="74" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="40" data-line="74" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+        <span class="pl-k">private</span> <span class="pl-k">void</span> <span class="pl-en">LogMessage</span>(<span class="pl-k">SoundCommand</span> <span class="pl-smi">aMessage</span>)</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R75" data-line-number="75" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="41" data-line="75" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+        {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R76" data-line-number="76" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="42" data-line="76" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            Logger.Info(<span class="pl-s"><span class="pl-pds">"</span>Звуковое сообщение:<span class="pl-pds">"</span></span>);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R77" data-line-number="77" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="43" data-line="77" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            Logger.Info(<span class="pl-s"><span class="pl-pds">"</span>Приоритет: <span class="pl-pds">"</span></span> + aMessage.priority);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R78" data-line-number="78" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="44" data-line="78" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            Logger.Info(<span class="pl-s"><span class="pl-pds">"</span>Каналов для воспроизведения: <span class="pl-pds">"</span></span> + aMessage.channelCount);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R79" data-line-number="79" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="45" data-line="79" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            <span class="pl-k">var</span> channels = <span class="pl-k">string</span>.Empty;</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R80" data-line-number="80" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="46" data-line="80" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            <span class="pl-k">for</span> (<span class="pl-k">var</span> i = <span class="pl-c1">0</span>; i &lt; aMessage.channelCount; ++i) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R81" data-line-number="81" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="47" data-line="81" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                channels += aMessage.channels[i] + <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>;</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R82" data-line-number="82" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="48" data-line="82" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R83" data-line-number="83" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="49" data-line="83" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            Logger.Info(<span class="pl-s"><span class="pl-pds">"</span>Каналы: <span class="pl-pds">"</span></span> + channels);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R84" data-line-number="84" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="50" data-line="84" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            Logger.Info(<span class="pl-s"><span class="pl-pds">"</span>Файлов для воспроизведения: <span class="pl-pds">"</span></span> + aMessage.fileCount);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R85" data-line-number="85" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="51" data-line="85" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            <span class="pl-k">var</span> messageFiles = Encoding.ASCII.GetString(aMessage.files);</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R86" data-line-number="86" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="52" data-line="86" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            <span class="pl-k">var</span> files = <span class="pl-k">string</span>.Empty;</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R87" data-line-number="87" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="53" data-line="87" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            <span class="pl-k">for</span> (<span class="pl-k">var</span> i = <span class="pl-c1">0</span>; i &lt; aMessage.fileCount; ++i) {</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R88" data-line-number="88" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="54" data-line="88" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+                files += <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\"</span><span class="pl-pds">"</span></span> + messageFiles.Substring(i*<span class="pl-c1">20</span>, <span class="pl-c1">20</span>).Trim(<span class="pl-s"><span class="pl-pds">'</span><span class="pl-cce">\0</span><span class="pl-pds">'</span></span>) + <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\"</span> <span class="pl-pds">"</span></span>;</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R89" data-line-number="89" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="55" data-line="89" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R90" data-line-number="90" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="56" data-line="90" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+            Logger.Info(<span class="pl-s"><span class="pl-pds">"</span>Файлы: <span class="pl-pds">"</span></span> + files);            </span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R91" data-line-number="91" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="57" data-line="91" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+        }</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R92" data-line-number="92" class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="58" data-line="92" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+</span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L70" data-line-number="70" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R93" data-line-number="93" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="59" data-line="93" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">         <span class="pl-c">/// &lt;<span class="pl-ent">summary</span>&gt;</span></span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L71" data-line-number="71" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R94" data-line-number="94" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="60" data-line="94" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">         <span class="pl-c">/// Инициализирует интерфейс обратных вызовов.</span></span>
+
+  </td>
+</tr>
+
+
+    
+
+<tr>
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5L72" data-line-number="72" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-3aad9623c8ac7992f8779bfeb33bf2a5R95" data-line-number="95" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="AudioServer/AudioServer/Alvasoft/AudioServer/Communication/CommandSession.cs" data-anchor="diff-3aad9623c8ac7992f8779bfeb33bf2a5" data-position="61" data-line="95" role="button" aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">         <span class="pl-c">/// &lt;/<span class="pl-ent">summary</span>&gt;</span></span>
+
+  </td>
+</tr>
+
+
+  <tr class="js-expandable-line">
+   <td class="blob-num blob-num-expandable" colspan="2">
+     <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#diff-3aad9623c8ac7992f8779bfeb33bf2a5" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/denxc/AS/blob_excerpt/1030fd1ea6027d99fea2e03f2c3b07b0f0257b96?diff=unified&amp;mode=100644&amp;path=AudioServer%2FAudioServer%2FAlvasoft%2FAudioServer%2FCommunication%2FCommandSession.cs&amp;prev_line_num_left=72&amp;prev_line_num_right=95" data-left-range="73-118" data-right-range="96-118">
+       <span class="octicon octicon-unfold"></span>
+     </a>
+   </td>
+   <td class="blob-code blob-code-expandable"></td>
+  </tr>
+
+              </tbody></table>
+            </div>
+      </div>
+</div>
+
+<button class="js-toggle-all-file-notes" data-hotkey="i" style="display:none">Toggle all file notes</button>
+
+
+<div id="all_commit_comments" class="js-quote-selection-container">
+  <div class="commit-comments-heading">
+    
+
+  </div>
+
+  <div id="comments" class="comment-holder">
+    
+
+<!-- Rendered timeline since 2015-05-31 15:40:44 -->
+<div id="partial-timeline-marker" class="js-timeline-marker js-socket-channel js-updatable-content" data-channel="denxc/AS:commit:3a53267f9903d9907450438820bc67feffbe201c" data-url="/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c/show_partial?partial=commit%2Ftimeline_marker&amp;since=1433112044" data-last-modified="Sun, 31 May 2015 22:40:44 GMT">
+</div>
+
+  </div>
+
+  
+
+    <div class="timeline-comment-wrapper timeline-new-comment js-comment-container">
+    <a href="https://github.com/desla"><img alt="@desla" class="timeline-comment-avatar" height="48" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/13344731(1)" width="48"></a>
+
+    <form accept-charset="UTF-8" action="https://github.com/denxc/AS/commit_comment/create" class="js-new-comment-form" data-remote="true" data-type="json" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="XgykFzLihxp8spX+hGlghGbO/U+IRHesdtBtX59DYkin/5csVhmU1CAY7w7XZmdsyOtgyBuAf2Rsk+HfUyjDaQ=="></div>
+      <div class="timeline-comment">
+        <input type="hidden" name="commit_id" value="3a53267f9903d9907450438820bc67feffbe201c">
+        <input type="hidden" name="path" value="">
+        
+<div class="js-previewable-comment-form js-suggester-container previewable-comment-form write-selected" data-preview-url="/preview?repository=29006287">
+  <div class="comment-form-head tabnav">
+    <div class="right">
+      <a class="tabnav-extra" href="https://guides.github.com/features/mastering-markdown/" target="_blank">
+        <span class="octicon octicon-markdown"></span>
+        Markdown supported
+      </a>
+      
+<a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#fullscreen" class="enable-fullscreen js-enable-fullscreen tooltipped-n
+  tabnav-extra">
+  <span class="octicon octicon-screen-full"></span>
+  Edit in fullscreen
+</a>
+
+    </div>
+    <nav class="tabnav-tabs">
+      <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#" class="tabnav-tab write-tab js-write-tab selected">Write</a>
+      <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#" class="tabnav-tab preview-tab js-preview-tab">Preview</a>
+    </nav>
+  </div>
+
+  <div class="comment-form-error js-comment-form-error" style="display:none">    There was an error creating your Commit.
+</div>
+  <div class="write-content js-write-bucket js-uploadable-container js-upload-markdown-image upload-enabled is-default" data-upload-policy-url="/upload/policies/assets" data-upload-repository-id="29006287">
+
+    <textarea name="comment[body]" tabindex="2" id="new_commit_comment_field" placeholder="Leave a comment" aria-label="Comment body" class="input-contrast comment-form-textarea js-comment-field js-task-list-field js-quick-submit js-size-to-fit js-quote-selection-target js-session-resumable js-suggester-field" required=""></textarea>
+
+        <p class="drag-and-drop">
+    <span class="default">
+        Attach images by dragging &amp; dropping,
+        <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">selecting them</a>, or pasting
+        from the clipboard.
+    </span>
+    <span class="loading">
+      <img alt="" height="16" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/octocat-spinner-32.gif" width="16"> Uploading your files…
+    </span>
+    <span class="error bad-file">
+      Unfortunately, we don't support that file type.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">Try again</a> with a
+          PNG, GIF, JPG.
+      </span>
+    </span>
+    <span class="error too-big">
+      Yowza, that's a big file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">Try again</a> with an image file smaller than 10MB.
+      </span>
+    </span>
+    <span class="error empty">
+      This file is empty.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">Try again</a> with a file that's not empty.
+      </span>
+    </span>
+    <span class="error bad-browser">
+      This browser doesn't support file attachments.
+      <span class="drag-and-drop-error-info">
+        We recommend updating to the latest
+        <a href="http://windows.microsoft.com/ie">Internet Explorer</a>,
+        <a href="https://chrome.google.com/">Google Chrome</a>, or
+        <a href="https://www.mozilla.org/firefox">Firefox</a>.
+      </span>
+    </span>
+    <span class="error failed-request">
+      Something went really wrong, and we can't process that file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#">Try again.</a>
+      </span>
+    </span>
+  </p>
+
+
+    <div class="suggester-container">
+      <div class="suggester js-suggester js-navigation-container" data-url="/denxc/AS/suggestions/commit/3a53267f9903d9907450438820bc67feffbe201c">
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-content">
+    <div class="comment">
+  <div class="comment-content">
+    <div class="comment-body markdown-body js-preview-body">
+      <p>Nothing to preview</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+  <div class="comment-form-error comment-form-bottom js-comment-update-error"></div>
+</div>
+
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" tabindex="2" data-disable-invalid="" data-disable-with="" disabled="">Comment on this commit</button>
+        </div>
+      </div>
+</form>  </div>
+
+</div>
+
+  <div class="thread-subscription-status js-thread-subscription-status js-socket-channel js-updatable-content" data-channel="denxc/AS:thread-subscription:3a53267f9903d9907450438820bc67feffbe201c:desla" data-url="/notifications/thread_subscription?repository_id=29006287&amp;thread_class=Commit&amp;thread_id=3a53267f9903d9907450438820bc67feffbe201c">
+
+  <span class="mega-octicon octicon-radio-tower"></span>
+
+  <form accept-charset="UTF-8" action="https://github.com/notifications/thread" class="thread-subscribe-form" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="3UY5H8QEdB9PprLiQf+LdjNipELNM+oK2RJgeTdqGgltBzIwDsfAbYBbaQ+SM1GVbOzz5mpOJjb+miDZ67OsFg=="></div>    <input type="hidden" name="repository_id" value="29006287">
+    <input type="hidden" name="thread_id" value="3a53267f9903d9907450438820bc67feffbe201c">
+    <input type="hidden" name="thread_class" value="Commit">
+    <input type="hidden" name="id" value="subscribe">
+
+    <button class="btn btn-sm" type="submit" data-disable-with="">
+      <span class="octicon octicon-unmute"></span>
+      Subscribe
+    </button>
+</form>
+  <p class="reason">You're not receiving notifications from this thread.</p>
+</div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com/" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://help.github.com/" data-ga-click="Footer, go to help, text:help">Help</a></li>
+
+    </ul>
+
+    <a href="https://github.com/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>© 2015 <span title="0.15371s from github-fe134-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea>
+      <div class="suggester-container">
+        <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="https://github.com/denxc/AS/commit/3a53267f9903d9907450438820bc67feffbe201c#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/frameworks-3241a40a58a82e21daef3dd3cdca01bde189158793c1b6f9193fff2b5293cd1d.js"></script>
+      <script async="async" crossorigin="anonymous" src="./Добавил логирование звукового сообщения. · denxc_AS@3a53267_files/index-d3ef45e52a74e2511c31a0051d5dfd10b60b12a8b8a738ead962c35e11dbcc1f.js"></script>
+      
+      
+  
+
+
+</body></html>
