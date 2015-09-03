@@ -44,15 +44,12 @@ namespace Alvasoft.AudioServer.TimesController
             var hour = time.Hour;
             var hourText = string.Empty;
 
-            if (hour < 20)
-            {
+            if (hour < 20) {
                 hourText = digits[hour];
-            }
-            else
-            {
+            } 
+            else {
                 hourText = tens[hour/10 - 1];
-                if (hour%10 > 0)
-                {
+                if (hour%10 > 0) {
                     hourText += " " + digits[hour%10];
                 }                
             }
@@ -64,28 +61,21 @@ namespace Alvasoft.AudioServer.TimesController
             }
 
             var minText = string.Empty;
-            if (minute < 20)
-            {
-                if (minute != 1 && minute != 2)
-                {
+            if (minute < 20) {
+                if (minute != 1 && minute != 2) {
                     minText = digits[minute];
                 }
-                else
-                {
+                else {
                     minText = (minute == 1 ? "одна" : "две");
                 }
             }
-            else
-            {
+            else {
                 minText = tens[minute/10 - 1];
-                if (minute%10 > 0)
-                {
-                    if (minute%10 > 2)
-                    {
+                if (minute%10 > 0) {
+                    if (minute%10 > 2) {
                         minText += " " + digits[minute%10];
                     }
-                    else
-                    {
+                    else {
                         minText += " " + (minute%10 == 1 ? "одна" : "две");
                     }
                 }
@@ -103,16 +93,13 @@ namespace Alvasoft.AudioServer.TimesController
         {
             var result = string.Empty;
 
-            if (hour == 0 || (hour >= 5 && hour <= 20))
-            {
+            if (hour == 0 || (hour >= 5 && hour <= 20)) {
                 result = "часов";
             }
-            else if (hour == 1 || hour == 21)
-            {
+            else if (hour == 1 || hour == 21) {
                 result = "час";
             }
-            else
-            {
+            else {
                 result = "чес+а"; // так лучше произношение.
             }
 
@@ -128,16 +115,13 @@ namespace Alvasoft.AudioServer.TimesController
         {
             var result = string.Empty;
 
-            if (minute % 10 == 0 || (minute >= 5 && minute <= 20) || (minute % 10 >= 5))
-            {
+            if (minute % 10 == 0 || (minute >= 5 && minute <= 20) || (minute % 10 >= 5)) {
                 result = "минут";
             }
-            else if (minute % 10 == 1)
-            {
+            else if (minute % 10 == 1) {
                 result = "минута";
             }
-            else
-            {
+            else {
                 result = "минуты";
             }
 

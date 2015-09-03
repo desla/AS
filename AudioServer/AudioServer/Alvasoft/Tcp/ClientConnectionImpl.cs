@@ -101,7 +101,7 @@ namespace Alvasoft.Tcp
         /// </summary>
         public void FreeConnection()
         {
-            socket.Dispose();            
+            socket.Dispose();                   
         }
     }
 }

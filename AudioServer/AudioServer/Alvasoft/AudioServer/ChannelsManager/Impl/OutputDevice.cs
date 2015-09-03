@@ -123,44 +123,49 @@ namespace Alvasoft.AudioServer.ChannelsManager.Impl
             }
 
             var pSoundData = Marshal.AllocHGlobal(dataLength);
-            Marshal.Copy(soundDataCopy, 0, pSoundData, dataLength);
 
-            var waveHdr = new WAVEHDR {
-                LpData = pSoundData,
-                DwBufferLength = (uint)dataLength,
-                DwFlags = 0,
-                DwLoops = 0
-            };
+            try {                
+                Marshal.Copy(soundDataCopy, 0, pSoundData, dataLength);
 
-            lock (writingLock) {                
-                var stepNumber = 0;
-                var stepSpeed = 100; // миллисекунды
-                var bytePerStep = 2 * bytePerSample * samplePerSec * stepSpeed / 1000;
+                var waveHdr = new WAVEHDR {
+                    LpData = pSoundData,
+                    DwBufferLength = (uint) dataLength,
+                    DwFlags = 0,
+                    DwLoops = 0
+                };
 
-                NativeMethods.waveOutPrepareHeader(this.handle, ref waveHdr, (uint)Marshal.SizeOf(typeof(WAVEHDR)));
-                NativeMethods.waveOutWrite(this.handle, ref waveHdr, (uint)Marshal.SizeOf(typeof(WAVEHDR)));
+                lock (writingLock) {
+                    var stepNumber = 0;
+                    var stepSpeed = 100; // миллисекунды
+                    var bytePerStep = 2*bytePerSample*samplePerSec*stepSpeed/1000;
 
-                // ожидаем окончания воспроизведения и меняем текущий уровень на каналах
-                while ((waveHdr.DwFlags & WAVEHDRFLAGS.WHDR_DONE) == 0) {
-                    var dataIndex = stepNumber * bytePerStep + aChannelId*2;
-                    if (dataIndex < dataLength) {
-                        var value = soundDataCopy[dataIndex] << 5;
-                        channelLevels[aChannelId] = value;
-                        //Logger.Info(value);
-                        stepNumber++;
-                    }                
-    
-                    Thread.Sleep(stepSpeed);
+                    NativeMethods.waveOutPrepareHeader(this.handle, ref waveHdr, (uint) Marshal.SizeOf(typeof (WAVEHDR)));
+                    NativeMethods.waveOutWrite(this.handle, ref waveHdr, (uint) Marshal.SizeOf(typeof (WAVEHDR)));
+
+                    // ожидаем окончания воспроизведения и меняем текущий уровень на каналах
+                    while ((waveHdr.DwFlags & WAVEHDRFLAGS.WHDR_DONE) == 0) {
+                        var dataIndex = stepNumber*bytePerStep + aChannelId*2;
+                        if (dataIndex < dataLength) {
+                            var value = soundDataCopy[dataIndex] << 5;
+                            channelLevels[aChannelId] = value;
+                            //Logger.Info(value);
+                            stepNumber++;
+                        }
+
+                        Thread.Sleep(stepSpeed);
+                    }
+
+                    channelLevels[aChannelId] = 0;
+
+                    NativeMethods.waveOutUnprepareHeader(this.handle, ref waveHdr,
+                        (uint) Marshal.SizeOf(typeof (WAVEHDR)));
+                    NativeMethods.waveOutReset(this.handle);
                 }
-
-                channelLevels[aChannelId] = 0;
-
-                NativeMethods.waveOutUnprepareHeader(this.handle, ref waveHdr, (uint)Marshal.SizeOf(typeof(WAVEHDR)));
-                NativeMethods.waveOutReset(this.handle);            
             }
-
-            // Освободим неуправляемую память
-            Marshal.FreeHGlobal(pSoundData);
+            finally {
+                // Освободим неуправляемую память
+                Marshal.FreeHGlobal(pSoundData);
+            }            
         }
 
         /// <summary>

@@ -34,10 +34,24 @@
         </layout>
     </appender>
 
+  <appender name="WarnRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs\\Warn.txt" />
+    <appendToFile value="true" />
+    <maximumFileSize value="10MB" />
+    <maxSizeRollBackups value="30" />
+    <filter type="log4net.Filter.LevelRangeFilter">
+      <levelMin value="WARN"/>
+      <levelMax value="WARN"/>
+    </filter>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%message%newline" />
+    </layout>
+  </appender>
     
     <root>        
         <appender-ref ref="Console" />
         <appender-ref ref="ErrorRollingFile" />
         <appender-ref ref="InfoRollingFile" />
+        <appender-ref ref="WarnRollingFile" />
     </root>
 </log4net>

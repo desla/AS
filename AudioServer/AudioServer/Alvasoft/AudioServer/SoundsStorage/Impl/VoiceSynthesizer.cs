@@ -11,8 +11,8 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
     public class VoiceSynthesizer
     {
         private SpeechSynthesizer generator; // генератор звука                
-        private SpeechAudioFormatInfo audioFormat; // настраиваемый аудио формат для генерации звука
         private object generatorLock = new object();
+        private SpeechAudioFormatInfo audioFormat; // настраиваемый аудио формат для генерации звука        
 
         /// <summary>
         /// Класс генератора звука.
@@ -51,7 +51,8 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
             using (var stream = new MemoryStream()) {
                 lock (generatorLock) {
                     generator.SetOutputToAudioStream(stream, audioFormat);
-                    generator.Speak(aText);                    
+                    generator.Speak(aText);
+                    generator.SetOutputToNull();
                 }
                 return stream.ToArray();
             }            

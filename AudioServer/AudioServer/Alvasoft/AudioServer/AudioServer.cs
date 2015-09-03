@@ -340,7 +340,7 @@ namespace Alvasoft.AudioServer
         /// <param name="aPrefixSound">Префикс для объявления времени.</param>
         /// <param name="aTimePhrase">Фраза для произношения.</param>
         public void OnTimeAnnounce(int[] aChannelIds, int aPriority, byte[] aPrefixSound, string aTimePhrase)
-        {
+        {            
             var timeSound = soundStorage.ProvideSound(new[] {aTimePhrase});
             var data = timeSound;
             if (aPrefixSound != null) {

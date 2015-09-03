@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.ServiceProcess;
 using System.Threading;
@@ -18,6 +19,8 @@ namespace Alvasoft.AudioServer
         private static AudioServer audioServerInstance = new AudioServer();
         private static Thread serviceThread;
 
+        private static Thread garbageCollectorThread;
+
         /// <summary>
         /// Исполняемая функция.
         /// </summary>
@@ -29,17 +32,17 @@ namespace Alvasoft.AudioServer
             }
             else {
                 serviceThread = new Thread(ServiceMethod);
-                serviceThread.Start();
+                serviceThread.Start();                                
 
                 Console.ReadLine();
 
-                audioServerInstance.Uninitialize();
-                Thread.Sleep(1000);
+                audioServerInstance.Uninitialize();                                
+
                 if (serviceThread.IsAlive) {
                     serviceThread.Abort();
                 }
             }
-        }
+        }        
 
         /// <summary>
         /// Запускает сервис.
@@ -79,10 +82,23 @@ namespace Alvasoft.AudioServer
 
             audioServerInstance.Initialize();
 
+            garbageCollectorThread = new Thread(GCMethod);
+            garbageCollectorThread.Start();
+
             Logger.Info("Поехали...");
 
             while (audioServerInstance.IsInitialized()) {
                 Thread.Sleep(1000);
+            }
+        }
+
+        private static void GCMethod()
+        {
+            while (audioServerInstance.IsInitialized()) {
+                Thread.Sleep(5 * 60 * 1000);                
+                GC.Collect();                
+                var currentMemory = Process.GetCurrentProcess().PrivateMemorySize64/1024;                
+                Logger.Warn(string.Format("Очистка памяти... Текущая память: ##{0}", currentMemory));                
             }
         }
     }
