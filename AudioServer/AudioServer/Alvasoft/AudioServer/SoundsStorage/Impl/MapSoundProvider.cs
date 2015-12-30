@@ -4,21 +4,24 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
+using Alvasoft.Utils;
 
 namespace Alvasoft.AudioServer.SoundsStorage.Impl
 {
     /// <summary>
-    /// Содержит карту имяФайла-фраза
+    /// Содержит карту имя Файла-фраза
     /// </summary>
     public class MapSoundProvider : SoundProvider
     {
         private const string NODE_ITEM = "item";
         private const string NODE_FILENAME = "filename";
         private const string NODE_MESSAGE = "message";
+        private const string NODE_PREFIX = "prefix";
 
         private VoiceSynthesizer generator;
         private HashSet<string> fileNames = new HashSet<string>();
         private List<string> phrases = new List<string>();
+        private List<PrefixSound> prefixs = new List<PrefixSound>();
 
         /// <summary>
         /// Создает провайдер-карту фраз по ключу.
@@ -65,6 +68,7 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
                     case NODE_ITEM: {
                             var filename = string.Empty;
                             var message = string.Empty;
+                            PrefixSound prefix = null;
                             var item = items[itemIndex];
                             var itemFiels = item.ChildNodes;
                             for (var fieldIndex = 0; fieldIndex < itemFiels.Count; ++fieldIndex) {
@@ -75,10 +79,13 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
                                     case NODE_MESSAGE:
                                         message = itemFiels[fieldIndex].InnerText.Trim();
                                         break;
+                                    case NODE_PREFIX:
+                                        prefix = new PrefixSound(itemFiels[fieldIndex].InnerText.Trim());
+                                        break;
                                 }
                             }
 
-                            AddPhrase(filename, message);
+                            AddPhrase(filename, message, prefix);
                         }
                         break;
                 }
@@ -90,7 +97,8 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
         /// </summary>
         /// <param name="aFileName">Имя файла.</param>
         /// <param name="aText">Соответствующая fileName'у (ключу) фраза.</param>
-        private void AddPhrase(string aFileName, string aText)
+        /// <param name="prefix"></param>
+        private void AddPhrase(string aFileName, string aText, PrefixSound prefix)
         {
             if (string.IsNullOrEmpty(aFileName)) {
                 throw new ArgumentNullException("aFileName");
@@ -106,6 +114,7 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
 
             fileNames.Add(aFileName);
             phrases.Add(aText);
+            prefixs.Add(prefix);
         }
 
         /// <summary>
@@ -136,7 +145,15 @@ namespace Alvasoft.AudioServer.SoundsStorage.Impl
             var soundsCount = fileNames.Count;
             for (var i = 0; i < soundsCount; ++i) {
                 if (aFileName.Equals(fileNames.ElementAt(i))) {
-                    return generator.Generate(phrases[i]);
+                    var phraseSound = generator.Generate(phrases[i]);
+                    if (prefixs[i] != null) {
+                        var prefixSound = prefixs[i].GetPrefixSound();
+                        if (prefixSound != null) {
+                            phraseSound = Enumerable.Concat(prefixSound, phraseSound).ToArray();
+                        }
+                    }
+
+                    return phraseSound;
                 }
             }
 

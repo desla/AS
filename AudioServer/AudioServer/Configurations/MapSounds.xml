@@ -2,6 +2,7 @@
 <items>
 	<item>
 		<filename>004.wav</filename>
+    <prefix>Prefixs/004Prefix.wav</prefix>
 		<message>на ванне четыре</message>
 	</item>
 	<item>
