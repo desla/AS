@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Net;
 using System.Windows.Forms;
 using Alvasoft.AudioServer.ChannelsManager;
@@ -335,10 +336,15 @@ namespace Alvasoft.AudioServer
         /// </summary>
         /// <param name="aChannelIds">Идентификаторы выходных каналов для объявления сообщения времени.</param>
         /// <param name="aPriority">Приоритет сообщения.</param>
+        /// /// <param name="aPrefixSound">Префикс для объявлния времени.</param>
         /// <param name="aTimePhrase">Фраза для произношения.</param>
-        public void OnTimeAnnounce(int[] aChannelIds, int aPriority, string aTimePhrase)
+        public void OnTimeAnnounce(int[] aChannelIds, int aPriority, byte[] aPrefixSound, string aTimePhrase)
         {
-            var data = soundStorage.ProvideSound(new[] {aTimePhrase});
+            var timeSound = soundStorage.ProvideSound(new[] { aTimePhrase });
+            var data = timeSound;
+            if (aPrefixSound != null) {
+                data = Enumerable.Concat(aPrefixSound, timeSound).ToArray();
+            }
             var message = new SoundMessage(data, (uint) aPriority);
             foreach (var channelId in aChannelIds) {
                 channelManager.ProcessMessage(message, channelId);

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 using System.Xml;
+using Alvasoft.Utils;
 using Alvasoft.Utils.Activity;
 using log4net;
 using Timer = System.Timers.Timer;
@@ -19,9 +20,11 @@ namespace Alvasoft.AudioServer.TimesController
         private static readonly ILog Logger = LogManager.GetLogger("TimeController");
 
         private const string NODE_CONFIGURATION = "configuration";
+        private const string NODE_PREFIX = "prefix";
 
         private TimeControllerCallback callback;
         private List<TimeControllerConfiguration> configurations = new List<TimeControllerConfiguration>();
+        private PrefixSound soundPrefix = null;
 
         private HashSet<int> currentChannelsIds = new HashSet<int>();        
         private int lastUsedMinute = -1;
@@ -72,7 +75,15 @@ namespace Alvasoft.AudioServer.TimesController
                 Logger.Info("Каналов для объявления времени: " + currentChannelsIds.Count);
                 if (callback != null) {
                     var timeMessage = TimeToTextConverter.Convert(currentTime);
-                    callback.OnTimeAnnounce(currentChannelsIds.ToArray(), 255, timeMessage);
+                    var prefixData = new byte[0];
+                    if (soundPrefix != null) {
+                        prefixData = soundPrefix.GetPrefixSound();
+                    }
+
+                    callback.OnTimeAnnounce(currentChannelsIds.ToArray(), 
+                                            255, 
+                                            prefixData,
+                                            timeMessage);
                 }
             }                            
         }
@@ -119,8 +130,9 @@ namespace Alvasoft.AudioServer.TimesController
                         var configuration = new TimeControllerConfiguration(items[itemIndex]);
                         configurations.Add(configuration);
                         break;
-                    default:
-                        throw new ArgumentException("Неизвестный параметр: " + items[itemIndex].Name);
+                    case NODE_PREFIX:
+                        soundPrefix = new PrefixSound(items[itemIndex].InnerText);
+                        break;
                 }
             }
         }

@@ -121,6 +121,7 @@
     <Compile Include="Alvasoft\AudioServer\TimeController\TimeControllerCallback.cs" />
     <Compile Include="Alvasoft\AudioServer\TimeController\TimeControllerConfiguration.cs" />
     <Compile Include="Alvasoft\AudioServer\TimeController\TimeToTextConverter.cs" />
+    <Compile Include="Alvasoft\Utils\SoundPrefix.cs" />
     <Compile Include="Program.cs">
       <SubType>Component</SubType>
     </Compile>

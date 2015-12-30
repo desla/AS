@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioServer", "AudioServer\AudioServer.csproj", "{FEE0AE93-894A-42FA-98F4-8A9979C54ACD}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AudioServerSetup", "AudioServerSetup\AudioServerSetup.vdproj", "{8E1E38EB-0962-4D8E-8983-53022A0BED14}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devices", "Devices\Devices.csproj", "{62BE27C3-57FB-4D75-B24D-116AA56628D9}"
 EndProject
@@ -17,8 +17,6 @@ Global
 		{FEE0AE93-894A-42FA-98F4-8A9979C54ACD}.Debug|x86.Build.0 = Debug|x86
 		{FEE0AE93-894A-42FA-98F4-8A9979C54ACD}.Release|x86.ActiveCfg = Release|x86
 		{FEE0AE93-894A-42FA-98F4-8A9979C54ACD}.Release|x86.Build.0 = Release|x86
-		{8E1E38EB-0962-4D8E-8983-53022A0BED14}.Debug|x86.ActiveCfg = Debug
-		{8E1E38EB-0962-4D8E-8983-53022A0BED14}.Release|x86.ActiveCfg = Release
 		{62BE27C3-57FB-4D75-B24D-116AA56628D9}.Debug|x86.ActiveCfg = Debug|x86
 		{62BE27C3-57FB-4D75-B24D-116AA56628D9}.Debug|x86.Build.0 = Debug|x86
 		{62BE27C3-57FB-4D75-B24D-116AA56628D9}.Release|x86.ActiveCfg = Release|x86
