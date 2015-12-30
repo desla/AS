@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle( "AudioServer" )]
 [assembly: AssemblyDescription( "" )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "" )]
+[assembly: AssemblyCompany("ООО АльваСофт")]
 [assembly: AssemblyProduct( "AudioServer" )]
-[assembly: AssemblyCopyright( "Copyright ©  2014" )]
+[assembly: AssemblyCopyright("АльваСофт ©  2015")]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
