@@ -17,7 +17,7 @@ namespace Alvasoft.AudioServer.Communication
 
         private AsyncTcpServer asyncTcpServer = new AsyncTcpServerImpl();
         private ServerListenerCallback callback;
-        private List<AbstractClientSession> sessions = new List<AbstractClientSession>();
+        private List<AbstractClientSession> sessions = new List<AbstractClientSession>();        
 
         private Timer sessionCleaner;
 
@@ -29,7 +29,7 @@ namespace Alvasoft.AudioServer.Communication
             asyncTcpServer.SetCallback(this);
             callback = null;
 
-            sessionCleaner = new Timer(5000);
+            sessionCleaner = new Timer(5 * 60 * 1000);
             sessionCleaner.Elapsed += CleanSession;            
         }
 
@@ -40,19 +40,38 @@ namespace Alvasoft.AudioServer.Communication
         /// <param name="e"></param>
         private void CleanSession(object sender, ElapsedEventArgs e)
         {
-            try {
-                var closedSessions = new List<AbstractClientSession>();
-                foreach (var session in sessions) {
-                    if (!session.GetClientConnection().IsConnected()) {
-                        closedSessions.Add(session);
+            sessionCleaner.Stop();
+            try {                                
+                var currentSessions = new List<AbstractClientSession>();
+                lock (sessions) {
+                    currentSessions.AddRange(sessions);
+                }
+                Logger.Info("Удаление неактивных подключений...");
+                Logger.Info("Всего подключений: " + currentSessions.Count);
+                var failedSessionsCount = 0;
+                var oldSessionsCount = 0;
+                var currentTime = DateTime.Now;
+                for (var i = 0; i < currentSessions.Count; ++i) {
+                    if (currentSessions[i].GetClientConnection().IsConnected() == false) {
+                        failedSessionsCount++;
+                        OnCloseConnection(currentSessions[i]);
+                    } 
+                    else if (currentSessions[i].CreatedTime.AddMinutes(3) <= currentTime) {
+                        oldSessionsCount++;
+                        OnCloseConnection(currentSessions[i]);
                     }
                 }
 
-                foreach (var session in closedSessions) {
-                    OnCloseConnection(session);
-                }
+                Logger.Info(string.Format("Закрыто подключений: " +
+                                          "{0} неактивных; " +
+                                          "{1} по таймауту.", 
+                                          failedSessionsCount, oldSessionsCount));
             }
-            catch {
+            catch (Exception ex) {
+                Logger.Error("Ошибка во время очистки пула соединений: " + ex.Message);
+            }
+            finally {
+                sessionCleaner.Start();
             }
         }
 
@@ -61,7 +80,9 @@ namespace Alvasoft.AudioServer.Communication
         {
             // Создаем новый экземпляр сессии.
             var session = CreateSession(aClientConnection);
-            sessions.Add(session);
+            lock (sessions) {
+                sessions.Add(session);
+            }            
             if (callback != null) {
                 callback.OnCreatedSession(this, session);
             }
@@ -74,12 +95,18 @@ namespace Alvasoft.AudioServer.Communication
         /// <param name="aClientSession"></param>
         public void OnCloseConnection(AbstractClientSession aClientSession)
         {
-            sessions.Remove(aClientSession);
+            Logger.Info("Закрываем соединение...");
+            lock (sessions) {
+                sessions.Remove(aClientSession);
+            }            
+
             aClientSession.FreeConnection();
 
             if (callback != null) {
                 callback.OnCloseConnection(this, aClientSession);
             }
+
+            Logger.Info("Соединение закрыто.");
         }
 
         /// <summary>
@@ -124,7 +151,9 @@ namespace Alvasoft.AudioServer.Communication
         /// <returns>Количество сессий.</returns>
         public int GetSessionsCount()
         {
-            return sessions.Count;
+            lock (sessions) {
+                return sessions.Count;
+            }            
         }
 
         /// <summary>
