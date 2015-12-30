@@ -113,7 +113,7 @@ namespace Alvasoft.AudioServer.TimesController
             }
             else
             {
-                result = "часа";
+                result = "чес+а"; // так лучше произношение.
             }
 
             return result;
