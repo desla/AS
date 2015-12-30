@@ -1,4 +1,5 @@
-﻿using Alvasoft.Tcp;
+﻿using System;
+using Alvasoft.Tcp;
 
 namespace Alvasoft.AudioServer.Communication
 {
@@ -9,6 +10,8 @@ namespace Alvasoft.AudioServer.Communication
     {        
         private ClientConnection clientConnection;
 
+        public DateTime CreatedTime { get; private set; }
+
         /// <summary>
         /// Конструктор.
         /// </summary>
@@ -16,6 +19,7 @@ namespace Alvasoft.AudioServer.Communication
         public AbstractClientSession(ClientConnection aClientConnection)
         {
             clientConnection = aClientConnection;
+            CreatedTime = DateTime.Now;
         }
 
         /// <summary>

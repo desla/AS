@@ -19,7 +19,8 @@ namespace Alvasoft.Tcp
 
         private Thread listenThread;        
         private ManualResetEvent listenSignal = new ManualResetEvent(false);
-        private Socket listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);        
+        private Socket listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        
         /// <summary>
         /// Инициализирует TCP-сервер.
         /// </summary>

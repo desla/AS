@@ -328,8 +328,7 @@ namespace Alvasoft.AudioServer
         /// <param name="aServerListener">Слушатель.</param>
         /// <param name="aClientSession">Сессия клиента, соединение с которым прервано.</param>
         public void OnCloseConnection(AbstractServerListener aServerListener, AbstractClientSession aClientSession)
-        {
-            Logger.Info("Соединение закрыто.");
+        {            
         }
 
         /// <summary>

@@ -100,7 +100,7 @@ namespace Alvasoft.Tcp
         /// Освобождает ресурсы подключения.
         /// </summary>
         public void FreeConnection()
-        {
+        {            
             socket.Dispose();                   
         }
     }
