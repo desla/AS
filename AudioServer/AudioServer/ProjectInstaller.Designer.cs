@@ -41,9 +41,9 @@
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.Description = "Аудио сервер (с) ALVASOFT";
-            this.serviceInstaller1.DisplayName = "AudioServer";
-            this.serviceInstaller1.ServiceName = "AudioServer";
+            this.serviceInstaller1.Description = "Аудио сервер ASIO (с) ALVASOFT";
+            this.serviceInstaller1.DisplayName = "AudioServerAsio";
+            this.serviceInstaller1.ServiceName = "AudioServerAsio";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
