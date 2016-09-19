@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioServer", "AudioServer\AudioServer.csproj", "{FEE0AE93-894A-42FA-98F4-8A9979C54ACD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devices", "Devices\Devices.csproj", "{62BE27C3-57FB-4D75-B24D-116AA56628D9}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "AudioServerAsioSetup", "AudioServerAsioSetup\AudioServerAsioSetup.isproj", "{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}"
-	ProjectSection(ProjectDependencies) = postProject
-		{FEE0AE93-894A-42FA-98F4-8A9979C54ACD} = {FEE0AE93-894A-42FA-98F4-8A9979C54ACD}
-	EndProjectSection
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AudioServerAsioSetup", "AudioServerAsioSetup\AudioServerAsioSetup.vdproj", "{7FE7AB9F-42DD-47B3-834A-03CA1BB126F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,16 +38,11 @@ Global
 		{62BE27C3-57FB-4D75-B24D-116AA56628D9}.Release|x86.Build.0 = Release|x86
 		{62BE27C3-57FB-4D75-B24D-116AA56628D9}.SingleImage|x86.ActiveCfg = Release|x86
 		{62BE27C3-57FB-4D75-B24D-116AA56628D9}.SingleImage|x86.Build.0 = Release|x86
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.CD_ROM|x86.ActiveCfg = CD_ROM
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.CD_ROM|x86.Build.0 = CD_ROM
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.Debug|x86.ActiveCfg = DVD-5
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.Debug|x86.Build.0 = DVD-5
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.DVD-5|x86.ActiveCfg = DVD-5
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.DVD-5|x86.Build.0 = DVD-5
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.Release|x86.ActiveCfg = SingleImage
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.Release|x86.Build.0 = SingleImage
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.SingleImage|x86.ActiveCfg = SingleImage
-		{FCCAA4BD-D0E8-40CE-AB2E-BE1705632247}.SingleImage|x86.Build.0 = SingleImage
+		{7FE7AB9F-42DD-47B3-834A-03CA1BB126F9}.CD_ROM|x86.ActiveCfg = Release
+		{7FE7AB9F-42DD-47B3-834A-03CA1BB126F9}.Debug|x86.ActiveCfg = Debug
+		{7FE7AB9F-42DD-47B3-834A-03CA1BB126F9}.DVD-5|x86.ActiveCfg = Debug
+		{7FE7AB9F-42DD-47B3-834A-03CA1BB126F9}.Release|x86.ActiveCfg = Release
+		{7FE7AB9F-42DD-47B3-834A-03CA1BB126F9}.SingleImage|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
